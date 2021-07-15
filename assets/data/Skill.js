@@ -21,28 +21,30 @@ import java from '../../public/skill/java.jpg';
 
 const data = [
     // Framework
-    { category: 'Framework', name: 'Laravel', desc: '', image: laravel, percentage: '90' },
-    { category: 'Framework', name: 'Symfony', desc: '', image: symfony, percentage: '90' },
-    { category: 'Framework', name: 'CodeIgniter', desc: '', image: codeigniter, percentage: '90' },
-    { category: 'Framework', name: 'Express JS', desc: '', image: express, percentage: '50' },
-    { category: 'Framework', name: 'React JS', desc: '', image: reactjs, percentage: '50' },
-    { category: 'Framework', name: 'Jquery', desc: '', image: jquery, percentage: '90' },
-    { category: 'Framework', name: 'Electron JS', desc: '', image: electron, percentage: '50' },
+    { category: 'Framework', name: 'Laravel', desc: '', image: 'devicon-laravel-plain colored', percentage: '90' },
+    { category: 'Framework', name: 'Symfony', desc: '', image: 'devicon-symfony-original colored', percentage: '90' },
+    { category: 'Framework', name: 'CodeIgniter', desc: '', image: 'devicon-codeigniter-plain colored', percentage: '90' },
+    { category: 'Framework', name: 'Express JS', desc: '', image: 'devicon-express-original colored', percentage: '50' },
+    { category: 'Framework', name: 'React JS', desc: '', image: 'devicon-react-original colored', percentage: '50' },
+    { category: 'Framework', name: 'Jquery', desc: '', image: 'devicon-jquery-plain colored', percentage: '90' },
+    { category: 'Framework', name: 'Electron JS', desc: '', image: 'devicon-electron-original colored', percentage: '50' },
 
-    // Bahasa Pemograman
-    { category: 'Bahasa Pemograman', name: 'PHP', desc: '', image: php, percentage: '90' },
-    { category: 'Bahasa Pemograman', name: 'JavaScript', desc: '', image: javascript, percentage: '90' },
-    { category: 'Bahasa Pemograman', name: 'HTML', desc: '', image: html, percentage: '90' },
-    { category: 'Bahasa Pemograman', name: 'CSS', desc: '', image: css, percentage: '90' },
-    { category: 'Bahasa Pemograman', name: 'Bootstrap', desc: '', image: bootstrap, percentage: '90' },
-    { category: 'Bahasa Pemograman', name: 'Tailwind', desc: '', image: tailwind, percentage: '70' },
-    { category: 'Bahasa Pemograman', name: 'Python', desc: '', image: python, percentage: '40' },
-    { category: 'Bahasa Pemograman', name: 'Java', desc: '', image: java, percentage: '40' },
+    // Programming Language
+    { category: 'Programming Language', name: 'PHP', desc: '', image: 'devicon-php-plain colored', percentage: '90' },
+    { category: 'Programming Language', name: 'JavaScript', desc: '', image: 'devicon-javascript-plain colored', percentage: '90' },
+    { category: 'Programming Language', name: 'Python', desc: '', image: 'devicon-python-plain colored', percentage: '40' },
+    { category: 'Programming Language', name: 'Java', desc: '', image: 'devicon-java-plain colored', percentage: '40' },
+
+    // Layouting
+    { category: 'Layouting', name: 'HTML', desc: '', image: 'devicon-html5-plain colored', percentage: '90' },
+    { category: 'Layouting', name: 'CSS', desc: '', image: 'devicon-css3-plain colored', percentage: '90' },
+    { category: 'Layouting', name: 'Bootstrap', desc: '', image: 'devicon-bootstrap-plain colored', percentage: '90' },
+    { category: 'Layouting', name: 'Tailwind', desc: '', image: 'devicon-tailwindcss-plain colored', percentage: '70' },
 
     // Database 
-    { category: 'Database', name: 'MySQL', desc: '', image: mysql, percentage: '80' },
-    { category: 'Database', name: 'PostgreSQL', desc: '', image: postgres, percentage: '80' },
-    { category: 'Database', name: 'Mongodb', desc: '', image: mongodb, percentage: '50' },
+    { category: 'Database', name: 'MySQL', desc: '', image: 'devicon-mysql-plain colored', percentage: '80' },
+    { category: 'Database', name: 'PostgreSQL', desc: '', image: 'devicon-postgresql-plain colored', percentage: '80' },
+    { category: 'Database', name: 'Mongodb', desc: '', image: 'devicon-mongodb-plain colored', percentage: '50' },
 ];
 
 export default data;
