@@ -18,10 +18,6 @@ export default function Home() {
         <section className="relative block" style={{ height: "500px" }}>
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')"
-            }}
           >
             <span
               id="blackOverlay"
@@ -82,8 +78,8 @@ export default function Home() {
                     Web Developer & Android Developer - Freelance 
                   </div>
                   <div className="mb-2 text-gray-700">
-                    <i className="fas fa-university mr-2 text-lg text-gray-400"></i>
-                    Smk Taruna Bhakti
+                    <i className="fas fa-graduation-cap mr-2 text-lg text-gray-400"></i>
+                    SMK TARUNA BHAKTI
                   </div>
                 </div>
 
@@ -102,7 +98,7 @@ export default function Home() {
                 </div>
 
                 
-                <div className="flex flex-wrap justify-center bg-gray-100 text-center">
+                <div className="flex flex-wrap justify-center bg-gray-100 text-center mb-5">
                   <div className="p-5">
                     <p className="text-lg font-semibold"> 3 year </p>
                     <p className="text-lg font-light"> Experience </p>
