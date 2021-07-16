@@ -78,25 +78,43 @@ export default function Home() {
                     <i className="fas fa-briefcase mr-2 text-lg text-gray-400"></i>
                     Web Developer & Android Developer - Freelance 
                   </div>
-                  <div className="mb-2 text-gray-700 mt-5">
-                    <i className="fas fa-mail mr-2 text-lg text-gray-400"></i>
+                  <div className="mb-2 text-gray-700 mt-2">
+                    <i className="fas fa-envelope mr-2 text-lg text-gray-400"></i>
                     muhammadrifqi.tb@gmail.com 
                   </div>
                   <div className="mb-2 text-gray-700">
                     <i className="fas fa-graduation-cap mr-2 text-lg text-gray-400"></i>
                     SMK TARUNA BHAKTI
                   </div>
+
+                  <div className="flex flex-wrap justify-center mt-5">
+                    <div className="bg-blue-500 text-white mx-2 rounded-lg">
+                      <label className="font-light text-sm p-2"> Teamwork </label>
+                    </div>
+                    
+                    <div className="bg-blue-500 text-white mx-2 rounded-lg">
+                      <label className="font-light text-sm p-2"> Creative Work </label>
+                    </div>
+
+                    <div className="bg-blue-500 text-white mx-2 rounded-lg">
+                      <label className="font-light text-sm p-2"> Motivated </label>
+                    </div>
+                    
+                    <div className="bg-blue-500 text-white mx-2 rounded-lg">
+                      <label className="font-light text-sm p-2"> Fast learning </label>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="mt-10 py-10 border-t border-gray-300 text-center">
+                <div className="mt-5 py-10 border-t border-gray-300 text-center">
                   <div className="flex flex-wrap justify-center">
                     <div className="w-full lg:w-9/12 px-4">
-                      <p className="mb-4 text-lg leading-relaxed text-gray-800">
-                        An artist of considerable range, Jenna the name taken by
-                        Melbourne-raised, Brooklyn-based Nick Murphy writes,
-                        performs and records all of his own music, giving it a
-                        warm, intimate feel with a solid groove structure. An
-                        artist of considerable range.
+                      <p className="mb-4 text-lg leading-relaxed text-gray-800 text-center" style={{textIndent: '50px'}}>
+                        I am an experienced programmer with 3 year working experience as web developer and 1 year experience in develop mobile app.
+                        I am currently working as freelance and currently looking for a job, if u interest you can contact me via 
+                        <a href="https://wa.me/?phone=082123073107" className="text-purple-600"> Whatsapp </a> or 
+                        <a href="mailto:muhammadrifqi.tb@gmail.com" className="text-purple-600"> Email </a>
+                        Thanks ..
                       </p>
                     </div>
                   </div>
