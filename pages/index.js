@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Skill from "../components/Skill";
+import Project from "../components/Project";
 
 import Image from "next/image"
 import ProfilePicture from "../assets/img/team-2-800x800.jpg"
@@ -77,6 +78,10 @@ export default function Home() {
                     <i className="fas fa-briefcase mr-2 text-lg text-gray-400"></i>
                     Web Developer & Android Developer - Freelance 
                   </div>
+                  <div className="mb-2 text-gray-700 mt-5">
+                    <i className="fas fa-mail mr-2 text-lg text-gray-400"></i>
+                    muhammadrifqi.tb@gmail.com 
+                  </div>
                   <div className="mb-2 text-gray-700">
                     <i className="fas fa-graduation-cap mr-2 text-lg text-gray-400"></i>
                     SMK TARUNA BHAKTI
@@ -98,21 +103,23 @@ export default function Home() {
                 </div>
 
                 
-                <div className="flex flex-wrap justify-center bg-gray-100 text-center mb-5">
+                <div className="flex flex-wrap justify-center bg-gray-100 text-center">
                   <div className="p-5">
                     <p className="text-lg font-semibold"> 3 year </p>
                     <p className="text-lg font-light"> Experience </p>
                   </div>
-                  <div className="p-5">
-                    <p className="text-lg font-semibold"> 15 </p>
-                    <p className="text-lg font-light"> Project </p>
-                  </div>
                 </div>
 
-                <div className="text-center mt-0 bg-gray-200 border-t border-gray-300">
-                  <p className="text-lg font-light mt-2"> SKILL </p>
+                <div className="text-center mt-1 bg-gray-100 border-t border-gray-300">
                   <Skill />
                 </div>
+
+                <div className="text-center bg-gray-100 border-t border-gray-300">
+                  <p className="font-bold my-1 text-lg"> Personal Project </p>
+
+                  <Project />
+                </div>
+
 
               </div>
             </div>

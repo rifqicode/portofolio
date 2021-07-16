@@ -20,7 +20,7 @@ export default function Skill() {
 
     return (
         <>
-            <div className="flex justify-center">
+            <div className="flex flex-wrap justify-center">
                 {SkillCategory.map((value, key) => {
                     return (
                         <p key={key} onClick={() => setActiveCategory(value.name)} className={"mx-2 font-light text-md border-b-2 p-3 hover:bg-blue-200 hover:mt-5 cursor-pointer " + (activeCategory == value.name ? 'border-blue-500' : 'border-gray-800')}> 
@@ -30,11 +30,11 @@ export default function Skill() {
                 })}
             </div>
 
-            <div className="container mx-auto my-5">
-                <div className="flex justify-center items-center">
+            <div className="container mx-auto my-1">
+                <div className="flex flex-wrap justify-center items-center">
                     {data.map((value, key) => {
                         return (
-                            <div className="mx-5 text-center w-40" key={key}>
+                            <div className="mx-5 text-center w-40 my-2" key={key}>
                                 <i className={value.image} style={{
                                     fontSize: '6rem'
                                 }}></i>
