@@ -71,7 +71,7 @@ export default function Home() {
                     Muhammad Rifqi Imam Saputra
                   </h3>
                   <div className="text-sm leading-normal mt-0 mb-2 text-gray-400 font-bold uppercase">
-                    <i className="fas fa-map-marker-alt mr-2 text-lg text-gray-400"></i>{" "}
+                    <i className="fas fa-map-marker-alt mr-2 text-lg text-gray-400"></i>
                     Depok, Jawa Barat, Indonesia
                   </div>
                   <div className="mb-2 text-gray-700 mt-5">
