@@ -1,7 +1,8 @@
 const data = [
     { name: 'Framework' },
-    { name: 'Bahasa Pemograman' },
-    { name: 'Database' }
+    { name: 'Programming Language' },
+    { name: 'Database' },
+    { name: 'Layouting'}
 ];
 
 export default data;
