@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import Image from 'next/image';
-import SkillData from '../assets/data/skill';
+import SkillData from '../assets/data/Skill';
 import SkillCategory from '../assets/data/SkillCategory';
 
 export default function Skill() {
