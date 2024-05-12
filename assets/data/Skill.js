@@ -4,8 +4,7 @@ const data = [
     { category: 'Framework', name: 'Symfony', desc: '', image: 'devicon-symfony-original colored', percentage: '90' },
     { category: 'Framework', name: 'CodeIgniter', desc: '', image: 'devicon-codeigniter-plain colored', percentage: '90' },
     { category: 'Framework', name: 'Express JS', desc: '', image: 'devicon-express-original colored', percentage: '50' },
-    { category: 'Framework', name: 'React JS', desc: '', image: 'devicon-react-original colored', percentage: '50' },
-    { category: 'Framework', name: 'Jquery', desc: '', image: 'devicon-jquery-plain colored', percentage: '90' },
+    { category: 'Framework', name: 'React', desc: '', image: 'devicon-react-original colored', percentage: '50' },
     { category: 'Framework', name: 'Electron JS', desc: '', image: 'devicon-electron-original colored', percentage: '50' },
 
     // Programming Language
@@ -21,9 +20,17 @@ const data = [
     { category: 'Layouting', name: 'Tailwind', desc: '', image: 'devicon-tailwindcss-plain colored', percentage: '70' },
 
     // Database 
-    { category: 'Database', name: 'MySQL', desc: '', image: 'devicon-mysql-plain colored', percentage: '80' },
     { category: 'Database', name: 'PostgreSQL', desc: '', image: 'devicon-postgresql-plain colored', percentage: '80' },
     { category: 'Database', name: 'Mongodb', desc: '', image: 'devicon-mongodb-plain colored', percentage: '50' },
+    { category: 'Database', name: 'Elastic Search', desc: '', image: 'devicon-elasticsearch-plain colored', percentage: '50' },
+    { category: 'Database', name: 'Redis', desc: '', image: 'devicon-redis-plain colored', percentage: '50' },
+    { category: 'Database', name: 'MySQL', desc: '', image: 'devicon-mysql-plain colored', percentage: '80' },
+
+    { category: 'Others', name: 'Docker', desc: '', image: 'devicon-docker-plain colored', percentage: '80' },
+    { category: 'Others', name: 'Git', desc: '', image: 'devicon-git-plain colored', percentage: '80' },
+    { category: 'Others', name: 'Git Flow', desc: '', image: 'devicon-git-plain colored', percentage: '80' },
+    { category: 'Others', name: 'Linux', desc: '', image: 'devicon-linux-plain colored', percentage: '80' },
+    { category: 'Others', name: 'Amazon Web Service', desc: '', image: 'devicon-amazonwebservices-plain colored', percentage: '80' },
 ];
 
 export default data;
