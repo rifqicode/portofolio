@@ -8,7 +8,7 @@ import Work from "../components/Work";
 import Biodata from "../components/Biodata";
 
 import Image from "next/image"
-import ProfilePicture from "../assets/img/team-2-800x800.jpg"
+import ProfilePicture from "../assets/img/avatar.jpg"
 
 export default function Home() {
   return (
