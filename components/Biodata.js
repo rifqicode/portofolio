@@ -39,7 +39,7 @@ export default function Biodata() {
                 </p>
                 <p className="font-black">
                   Open for any opportunity, Contact me here  
-                  <a target="_blank" href="https://wa.me/?phone={BiodataData.whatsapp}" className="text-purple-600"> Whatsapp </a> or 
+                  <a target="_blank" rel="noreferrer" href="https://wa.me/?phone={BiodataData.whatsapp}" className="text-purple-600"> Whatsapp </a> or 
                   <a href="mailto:{BiodataData.email}" className="text-purple-600"> Email </a>
                 </p>
               </div>
