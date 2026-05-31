@@ -1,9 +1,18 @@
 const data = [
-    { name: 'Tanya Jawab RealTime', description: 'Aplikasi web jawab pertanyaan secara realtime', url: 'https://game-tanya-jawab.herokuapp.com/' },
-    { name: 'Simple E-Commerce', description: 'Aplikas jual beli barang secara online', url: 'https://simple-ecommerce-demos.herokuapp.com/' },
-    { name: 'Fokoline', description: 'Aplikasi web untuk melakukan fotokopi secara online', url: '' },
-    { name: 'Notaris', description: 'Aplikasi Pendataan Notaris', url: '' },
-    { name: 'Traveliya', description: 'Aplikasi Pemesanan Tiket Kereta', url: '' },
+  {
+    name: 'worker',
+    description: 'Distributed background worker monorepo with a Gin-based controller, PostgreSQL job persistence, Kafka queues, status update handling, and bounded worker-pool execution.',
+    icon: 'settings_suggest',
+    tags: ['Go', 'Gin', 'PostgreSQL', 'Kafka', 'Worker Pool'],
+    url: 'https://github.com/rifqicode/worker',
+  },
+  {
+    name: 'quizer',
+    description: 'Quiz application backend with REST APIs for authentication, quiz sessions, topic management, and user progress tracking.',
+    icon: 'quiz',
+    tags: ['Go', 'Gin', 'PostgreSQL', 'JWT', 'golang-migrate'],
+    url: 'https://github.com/rifqicode/quizer',
+  },
 ];
 
 export default data;

@@ -1,26 +1,67 @@
 import ProjectData from '../assets/data/Project';
 
 export default function Project() {
-    return (
-        <>
-            <div className="flex flex-wrap justify-center mt-5 mb-5">
+  return (
+    <section id="projects" className="relative z-10 mt-2 flex flex-col gap-8 pb-12">
+      <SectionLabel text="~/personal-projects" />
 
-            {ProjectData.map((value, key) => {
-                return ( 
-                <div key={key} className="border-2 border-black p-5 rounded-lg shadow-lg bg-white mx-2 my-2 hover:bg-blue-200 lg:w-1/3 w-2/3" >
-                    <p className="font-bold"> {value.name} </p>
-                    <p className="font-light"> {value.description} </p>
-
-                    <div className=""> 
-                    <button className={"border-yellow-200 border-1 rounded-lg p-2 mt-5 w-1/3 " +( value.url ? 'bg-yellow-400' : 'bg-gray-100 cursor-not-allowed')} onClick={() => { if(value.url) window.open(value.url, '_blank')}}> 
-                        Demo
-                        <i className="fas fa-chevron-right ml-2"></i> 
-                    </button>
-                    </div>
-                </div> 
-                )
-            })}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {ProjectData.map((project) => (
+          <article
+            key={project.name}
+            className="glass-card group relative flex h-full flex-col justify-between overflow-hidden rounded-lg border border-white/10 p-6 transition hover:border-primary/50"
+          >
+            <div className="absolute right-0 top-0 p-2 opacity-10">
+              <span className="material-symbols-outlined text-4xl">{project.icon}</span>
             </div>
-        </>
-    )
+
+            <div>
+              <div className="mb-4 flex items-start justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-[20px] text-primary">description</span>
+                  <h3 className="font-mono text-base text-on-surface">{project.name}</h3>
+                </div>
+                <span className="material-symbols-outlined text-on-surface-variant transition group-hover:text-primary">
+                  folder_open
+                </span>
+              </div>
+
+              <p className="mb-6 text-sm text-on-surface-variant">{project.description}</p>
+            </div>
+
+            <div className="mt-auto flex flex-col gap-4">
+              <div className="flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-wider text-on-surface-variant">
+                {project.tags.map((tag) => (
+                  <span key={tag} className="rounded bg-surface-container px-2 py-0.5">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex items-center justify-between border-t border-white/5 pt-4">
+                <a
+                  className="flex items-center gap-2 font-mono text-xs text-primary transition hover:text-primary-fixed"
+                  href={project.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="fab fa-github text-sm"></i>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function SectionLabel({ text }) {
+  return (
+    <div className="flex items-center gap-4">
+      <span className="font-mono text-sm text-primary">{text}</span>
+      <div className="h-px flex-grow bg-white/10" />
+    </div>
+  );
 }

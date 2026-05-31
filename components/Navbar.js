@@ -1,93 +1,92 @@
-import React from "react";
+import { useEffect, useState } from 'react';
+import BiodataData from '../assets/data/Biodata';
 
-export default function Navbar(props) {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+const navItems = [
+  { label: 'Home', href: '#home' },
+  { label: 'Tech Stack', href: '#tech' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+];
+
+export default function Navbar() {
+  const [activeHref, setActiveHref] = useState(navItems[0].href);
+
+  useEffect(() => {
+    const sections = navItems
+      .map((item) => document.querySelector(item.href))
+      .filter(Boolean)
+      .sort((a, b) => a.offsetTop - b.offsetTop);
+
+    if (!sections.length) {
+      return undefined;
+    }
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 180;
+      const current = sections.reduce((active, section) => {
+        return section.offsetTop <= scrollPosition ? section : active;
+      }, sections[0]);
+
+      setActiveHref(`#${current.id}`);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
   return (
-    <>
-      <nav
-        className={
-          (props.transparent
-            ? "top-0 absolute z-50 w-full"
-            : "relative bg-white shadow-lg") +
-          " flex flex-wrap items-center justify-between px-2 py-3 "
-        }
-      >
-        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <a
-              className={
-                (props.transparent ? "text-white" : "text-gray-800") +
-                " text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
-              }
-              href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
-            >
-              Muhammad Rifqi
-            </a>
-            <button
-              className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-              type="button"
-              onClick={() => setNavbarOpen(!navbarOpen)}
-            >
-              <i
-                className={
-                  (props.transparent ? "text-white" : "text-gray-800") +
-                  " fas fa-bars"
-                }
-              ></i>
-            </button>
-          </div>
-          <div
-            className={
-              "lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none" +
-              (navbarOpen ? " block rounded shadow-lg" : " hidden")
-            }
-            id="example-navbar-warning"
-          >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="flex items-center">
-                <a
-                  className={
-                    (props.transparent
-                      ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
-                      : "text-gray-800 hover:text-gray-600") +
-                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  }
-                  href="https://www.github.com/rifqicode"
-                  target="_blank" rel="noreferrer"
-                >
-                  <i
-                    className={
-                      (props.transparent
-                        ? "lg:text-gray-300 text-gray-500"
-                        : "text-gray-500") +
-                      " fab fa-github text-lg leading-lg "
-                    }
-                  />
-                  <span className="lg:hidden inline-block ml-2">Github</span>
-                </a>
-              </li>
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-background/70 text-on-surface backdrop-blur-md">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4 md:px-8">
+        <a href="#home" className="font-mono text-sm font-bold uppercase tracking-tight">
+          {BiodataData.shortName}
+        </a>
 
-              <li className="flex items-center">
-                <a
-                  className={
-                    (props.transparent
-                      ? "bg-white text-gray-800 active:bg-gray-100"
-                      : "bg-pink-500 text-white active:bg-pink-600") +
-                    " text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 cursor-pointer"
-                  }
-                  style={{ transition: "all .15s ease" }}
-                  onClick={() => {
-                    window.open('/cv.pdf', '_blank')
-                  }}
-                  download
-                >
-                  <i className="fas fa-arrow-alt-circle-down"></i> Download
-                </a>
-              </li>
-            </ul>
-          </div>
+        <nav className="hidden items-center gap-8 font-mono text-xs md:flex">
+          {navItems.map((item) => {
+            const isActive = activeHref === item.href;
+
+            return (
+              <a
+                key={item.href}
+                href={item.href}
+                className={
+                  isActive
+                    ? 'border-b-2 border-primary pb-1 font-bold text-primary transition hover:text-primary-fixed'
+                    : 'border-b-2 border-transparent pb-1 text-on-surface-variant transition hover:text-primary'
+                }
+              >
+                {item.label}
+              </a>
+            );
+          })}
+        </nav>
+
+        <div className="flex items-center gap-4">
+          <a
+            href="https://github.com/rifqicode"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open GitHub profile"
+            className="hidden text-on-surface transition hover:text-primary sm:inline-flex"
+          >
+            <span className="material-symbols-outlined text-[20px]">terminal</span>
+          </a>
+          <a
+            href={BiodataData.cvUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden rounded bg-primary px-4 py-2 font-mono text-xs font-bold text-[#001f26] transition hover:bg-primary-fixed md:inline-flex"
+          >
+            Download CV
+          </a>
         </div>
-      </nav>
-    </>
+      </div>
+    </header>
   );
 }
