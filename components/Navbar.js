@@ -22,7 +22,14 @@ export default function Navbar() {
     }
 
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 180;
+      const isAtPageBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 24;
+      const scrollPosition = window.scrollY + window.innerHeight * 0.4;
+
+      if (isAtPageBottom) {
+        setActiveHref(`#${sections[sections.length - 1].id}`);
+        return;
+      }
+
       const current = sections.reduce((active, section) => {
         return section.offsetTop <= scrollPosition ? section : active;
       }, sections[0]);
