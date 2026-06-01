@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import BiodataData from '../assets/data/Biodata';
 
 const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'Tech Stack', href: '#tech' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
+  { label: { en: 'Home', id: 'Beranda' }, href: '#home' },
+  { label: { en: 'Tech Stack', id: 'Tech Stack' }, href: '#tech' },
+  { label: { en: 'Experience', id: 'Pengalaman' }, href: '#experience' },
+  { label: { en: 'Projects', id: 'Proyek' }, href: '#projects' },
 ];
 
-export default function Navbar() {
+export default function Navbar({ language = 'en', onLanguageChange }) {
   const [activeHref, setActiveHref] = useState(navItems[0].href);
 
   useEffect(() => {
@@ -68,13 +68,34 @@ export default function Navbar() {
                     : 'border-b-2 border-transparent pb-1 text-on-surface-variant transition hover:text-primary'
                 }
               >
-                {item.label}
+                {item.label[language]}
               </a>
             );
           })}
         </nav>
 
         <div className="flex items-center gap-4">
+          <div className="flex rounded border border-white/10 bg-surface-low p-0.5 font-mono text-[11px]">
+            {['en', 'id'].map((item) => {
+              const isActive = language === item;
+
+              return (
+                <button
+                  key={item}
+                  type="button"
+                  onClick={() => onLanguageChange?.(item)}
+                  className={
+                    'rounded px-2 py-1 uppercase transition ' +
+                    (isActive ? 'bg-primary text-[#001f26]' : 'text-on-surface-variant hover:text-primary')
+                  }
+                  aria-pressed={isActive}
+                >
+                  {item}
+                </button>
+              );
+            })}
+          </div>
+
           <a
             href="https://github.com/rifqicode"
             target="_blank"
@@ -90,7 +111,7 @@ export default function Navbar() {
             rel="noreferrer"
             className="hidden rounded bg-primary px-4 py-2 font-mono text-xs font-bold text-[#001f26] transition hover:bg-primary-fixed md:inline-flex"
           >
-            Download CV
+            {language === 'id' ? 'Unduh CV' : 'Download CV'}
           </a>
         </div>
       </div>

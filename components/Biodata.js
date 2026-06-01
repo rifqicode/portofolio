@@ -3,6 +3,20 @@ import BiodataData from '../assets/data/Biodata';
 
 const traits = ['Teamwork', 'Analytic Thinking', 'Motivated', 'Fast Learning', 'Growth Mindset'];
 
+const copy = {
+  en: {
+    role: 'Senior Backend Engineer - Production Systems & Integrations',
+    education: 'BINUS Information Systems (2024 - Present)',
+    summary: BiodataData.summary,
+  },
+  id: {
+    role: 'Senior Backend Engineer - Sistem Produksi & Integrasi',
+    education: 'Sistem Informasi BINUS (2024 - Sekarang)',
+    summary:
+      'Backend Engineer dengan pengalaman 7+ tahun dalam merancang dan membangun sistem backend yang scalable di production. Berpengalaman di distributed systems, microservices architecture, integrasi pihak ketiga, dan sistem data-intensive untuk domain fintech serta enterprise.',
+  },
+};
+
 const developerCode = `const developer = {
   name: 'Muhammad Rifqi',
   role: 'Senior Backend Engineer',
@@ -19,8 +33,9 @@ const developerCode = `const developer = {
   }
 };`;
 
-export default function Biodata() {
+export default function Biodata({ language = 'en' }) {
   const [copied, setCopied] = useState(false);
+  const content = copy[language] || copy.en;
 
   const handleCopy = async () => {
     try {
@@ -48,9 +63,9 @@ export default function Biodata() {
 
         <div className="flex flex-col gap-2 font-mono text-xs text-on-surface-variant sm:text-sm">
           <InfoRow icon="location_on" text={BiodataData.location} />
-          <InfoRow icon="work" text="Senior Backend Engineer - Production Systems & Integrations" />
+          <InfoRow icon="work" text={content.role} />
           <InfoRow icon="mail" text={BiodataData.email} />
-          <InfoRow icon="school" text="BINUS Information Systems (2024 - Present)" />
+          <InfoRow icon="school" text={content.education} />
         </div>
 
         <div className="flex flex-wrap gap-2">
@@ -62,7 +77,7 @@ export default function Biodata() {
         </div>
 
         <p className="max-w-2xl text-sm leading-7 text-on-surface-variant sm:text-base">
-          {BiodataData.summary}
+          {content.summary}
         </p>
       </div>
 
@@ -82,7 +97,7 @@ export default function Biodata() {
           >
             <span className="material-symbols-outlined text-[16px]">{copied ? 'check' : 'content_copy'}</span>
             <span className="absolute -top-8 right-0 rounded bg-surface px-2 py-1 font-mono text-xs text-on-surface opacity-0 transition group-hover:opacity-100">
-              {copied ? 'Copied!' : 'Copy'}
+              {copied ? (language === 'id' ? 'Tersalin!' : 'Copied!') : language === 'id' ? 'Salin' : 'Copy'}
             </span>
           </button>
         </div>
@@ -98,7 +113,6 @@ export default function Biodata() {
               {'\n'}  <span className="text-outline">skills:</span> [
               {'\n'}    <span className="text-tertiary">&apos;JavaScript&apos;</span>,
               {'\n'}    <span className="text-tertiary">&apos;Go&apos;</span>,
-              {'\n'}    <span className="text-tertiary">&apos;Express JS&apos;</span>,
               {'\n'}    <span className="text-tertiary">&apos;Kafka&apos;</span>,
               {'\n'}    <span className="text-tertiary">&apos;PostgreSQL&apos;</span>
               {'\n'}  ],

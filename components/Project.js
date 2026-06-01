@@ -1,6 +1,6 @@
 import ProjectData from '../assets/data/Project';
 
-export default function Project() {
+export default function Project({ language = 'en' }) {
   return (
     <section id="projects" className="relative z-10 mt-2 flex flex-col gap-8 pb-12">
       <SectionLabel text="~/personal-projects" />
@@ -26,7 +26,9 @@ export default function Project() {
                 </span>
               </div>
 
-              <p className="mb-6 text-sm text-on-surface-variant">{project.description}</p>
+              <p className="mb-6 text-sm text-on-surface-variant">
+                {language === 'id' && project.descriptionId ? project.descriptionId : project.description}
+              </p>
             </div>
 
             <div className="mt-auto flex flex-col gap-4">
@@ -46,7 +48,7 @@ export default function Project() {
                   rel="noreferrer"
                 >
                   <i className="fab fa-github text-sm"></i>
-                  View on GitHub
+                  {language === 'id' ? 'Lihat di GitHub' : 'View on GitHub'}
                 </a>
               </div>
             </div>

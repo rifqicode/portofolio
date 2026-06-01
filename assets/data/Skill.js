@@ -13,6 +13,7 @@ const data = [
   { category: 'Framework', name: 'React JS', desc: '', image: 'devicon-react-original colored', percentage: '70' },
   { category: 'Framework', name: 'Next JS', desc: '', image: 'devicon-nextjs-original-wordmark colored', percentage: '70' },
   { category: 'Framework', name: 'Angular', desc: '', image: 'devicon-angularjs-plain colored', percentage: '60' },
+  { category: 'Framework', name: 'Tailwind CSS', desc: '', image: 'devicon-tailwindcss-plain colored', percentage: '70' },
 
   // Databases & Storage
   { category: 'Database', name: 'PostgreSQL', desc: '', image: 'devicon-postgresql-plain colored', percentage: '85' },
@@ -28,7 +29,6 @@ const data = [
 
   // Cloud & DevOps
   { category: 'Infrastructure', name: 'Docker', desc: '', image: 'devicon-docker-plain colored', percentage: '80' },
-  { category: 'Infrastructure', name: 'Linux', desc: '', image: 'devicon-linux-plain colored', percentage: '80' },
   { category: 'Infrastructure', name: 'AWS S3', desc: '', image: 'devicon-amazonwebservices-plain colored', percentage: '70' },
   { category: 'Infrastructure', name: 'AWS EC2', desc: '', image: 'devicon-amazonwebservices-plain colored', percentage: '70' },
   { category: 'Infrastructure', name: 'AWS Lambda', desc: '', image: 'devicon-amazonwebservices-plain colored', percentage: '65' },
@@ -37,11 +37,9 @@ const data = [
 
   // AI Tools
   { category: 'AI Tools', name: 'ChatGPT', desc: '', image: 'fas fa-robot', percentage: '85' },
-  { category: 'AI Tools', name: 'GitHub Copilot', desc: '', image: 'fab fa-github', percentage: '80' },
-  { category: 'AI Tools', name: 'Claude', desc: '', image: 'fas fa-brain', percentage: '80' },
+  { category: 'AI Tools', name: 'GitHub Copilot', desc: '', image: 'fas fa-robot', percentage: '80' },
   { category: 'AI Tools', name: 'Claude Code', desc: '', image: 'fas fa-terminal', percentage: '80' },
-  { category: 'AI Tools', name: 'Cursor', desc: '', image: 'fas fa-code', percentage: '80' },
-  { category: 'AI Tools', name: 'Gemini', desc: '', image: 'fas fa-star', percentage: '75' },
+  { category: 'AI Tools', name: 'Gemini', desc: '', image: 'fas fa-terminal', percentage: '75' },
   { category: 'AI Tools', name: 'Hermes', desc: '', image: 'fas fa-terminal', percentage: '75' },
   { category: 'AI Tools', name: 'OpenClaw', desc: '', image: 'fas fa-terminal', percentage: '75' },
 ];

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useState } from 'react';
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -8,6 +9,8 @@ import Biodata from '../components/Biodata';
 import Project from '../components/Project';
 
 export default function Home() {
+  const [language, setLanguage] = useState('en');
+
   return (
     <>
       <Head>
@@ -19,15 +22,15 @@ export default function Home() {
       </Head>
 
       <div id="top" className="min-h-screen bg-background text-on-surface">
-        <Navbar />
+        <Navbar language={language} onLanguageChange={setLanguage} />
         <main className="relative mx-auto flex w-full max-w-[1200px] flex-col gap-16 px-6 py-12 md:px-8">
           <div className="pointer-events-none absolute left-1/2 top-0 -z-0 h-[400px] w-[800px] max-w-full -translate-x-1/2 rounded-full bg-primary opacity-10 blur-[120px]" />
-          <Biodata />
+          <Biodata language={language} />
           <Skill />
-          <Work />
-          <Project />
+          <Work language={language} />
+          <Project language={language} />
         </main>
-        <Footer />
+        <Footer language={language} />
       </div>
     </>
   );

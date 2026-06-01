@@ -1,6 +1,6 @@
 import WorkData from '../assets/data/Work';
 
-export default function Work() {
+export default function Work({ language = 'en' }) {
   return (
     <section id="experience" className="relative z-10 mt-2 flex flex-col gap-8">
       <SectionLabel text="~/work-experience" />
@@ -23,13 +23,13 @@ export default function Work() {
 
                 {isLeftCard ? (
                   <>
-                    <TimelineCard item={item} align="right" />
+                    <TimelineCard item={item} align="right" language={language} />
                     <TimelineDate date={item.date} side="right" />
                   </>
                 ) : (
                   <>
                     <TimelineDate date={item.date} side="left" />
-                    <TimelineCard item={item} />
+                    <TimelineCard item={item} language={language} />
                   </>
                 )}
               </article>
@@ -54,7 +54,7 @@ function TimelineDate({ date, side }) {
   );
 }
 
-function TimelineCard({ item, align = 'left' }) {
+function TimelineCard({ item, align = 'left', language = 'en' }) {
   return (
     <div className={'w-full pl-4 md:w-5/12 md:pl-0 ' + (align === 'right' ? 'md:pr-8' : 'md:pl-8')}>
       <div className="glass-card terminal-border rounded-lg p-6">
@@ -81,7 +81,7 @@ function TimelineCard({ item, align = 'left' }) {
           {item.workDetails.map((workDetail, keyDetail) => (
             <li key={keyDetail} className="flex items-start gap-2">
               <span className="material-symbols-outlined mt-0.5 text-[16px] text-secondary">chevron_right</span>
-              <span>{workDetail.description}</span>
+              <span>{language === 'id' && workDetail.descriptionId ? workDetail.descriptionId : workDetail.description}</span>
             </li>
           ))}
         </ul>

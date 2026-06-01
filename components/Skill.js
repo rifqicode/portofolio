@@ -4,6 +4,7 @@ import SkillData from '../assets/data/Skill';
 const tabs = [
   { label: 'Languages', names: ['JavaScript', 'Go', 'PHP', 'SQL'] },
   { label: 'Backend', names: ['Gin', 'Express JS', 'Laravel', 'Symfony'] },
+  { label: 'Frontend', names: ['React JS', 'Next JS', 'Angular', 'Tailwind CSS'] },
   { label: 'Data', names: ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'ElasticSearch'] },
   { label: 'Streaming', names: ['Kafka', 'NSQ', 'Debezium'] },
   { label: 'Cloud & DevOps', names: ['Docker', 'Linux', 'AWS S3', 'AWS EC2', 'AWS Lambda'] },
