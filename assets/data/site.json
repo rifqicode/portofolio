@@ -1,0 +1,24 @@
+{
+  "siteUrl": "https://rifqicode-portofolio.vercel.app",
+  "title": "Muhammad Rifqi - Senior Backend Engineer | Distributed Systems",
+  "description": "Portfolio of Muhammad Rifqi, Senior Backend Engineer with 7+ years of production experience in scalable distributed systems, Go, Node.js, Kafka CDC streaming pipelines, and enterprise integrations. Open for remote roles and consulting.",
+  "keywords": "Muhammad Rifqi, rifqicode, Senior Backend Engineer, Distributed Systems, Microservices, Golang, Go, Node.js, Kafka, Debezium, PostgreSQL, Redis, Indonesia Software Engineer, Remote Backend Engineer, API Architecture, Freelance Backend Consultant",
+  "author": "Muhammad Rifqi Imam Saputra",
+  "socialLinks": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/rifqicode",
+      "icon": "fab fa-github"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:muhammadrifqi.tb@gmail.com",
+      "icon": "fas fa-envelope"
+    },
+    {
+      "label": "WhatsApp",
+      "url": "https://wa.me/6282123073107",
+      "icon": "fab fa-whatsapp"
+    }
+  ]
+}

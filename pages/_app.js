@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Rifqi - Senior Backend Engineer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0e1416" />
+        <meta name="theme-color" content="#ffffff" />
         <meta name="description" content="Modern portfolio of Muhammad Rifqi, senior backend engineer." />
         <link
           rel="stylesheet"

@@ -1,0 +1,69 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#ffffff" />
+  
+  <!-- Subtle Grid Pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)" />
+
+  <!-- Outer Border Frame -->
+  <rect x="40" y="40" width="1120" height="550" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Header Bar -->
+  <g transform="translate(80, 85)">
+    <!-- Terminal dots -->
+    <circle cx="10" cy="10" r="6" fill="#ef4444"/>
+    <circle cx="30" cy="10" r="6" fill="#f59e0b"/>
+    <circle cx="50" cy="10" r="6" fill="#10b981"/>
+    
+    <!-- Domain Tag -->
+    <rect x="75" y="-2" width="280" height="26" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="90" y="15" font-family="monospace" font-size="13" font-weight="600" fill="#64748b">rifqicode-portofolio.vercel.app</text>
+  </g>
+
+  <!-- Name -->
+  <text x="80" y="230" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="58" font-weight="800" fill="#0f172a" letter-spacing="-1.5">Muhammad Rifqi</text>
+
+  <!-- Role Title -->
+  <text x="80" y="290" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="30" font-weight="700" fill="#334155">Senior Backend Engineer &amp; Systems Architect</text>
+
+  <!-- Description -->
+  <text x="80" y="355" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="400" fill="#64748b">Specialized in scalable distributed systems, microservices in Go &amp; Node.js,</text>
+  <text x="80" y="388" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="400" fill="#64748b">event-driven streaming with Kafka &amp; Debezium, and resilient API architectures.</text>
+
+  <!-- Skill Badges -->
+  <g transform="translate(80, 465)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="125" height="38" rx="8" fill="#0f172a"/>
+    <text x="62" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Golang &amp; Gin</text>
+
+    <!-- Pill 2 -->
+    <rect x="137" y="0" width="135" height="38" rx="8" fill="#0f172a"/>
+    <text x="204" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Node.js / TS</text>
+
+    <!-- Pill 3 -->
+    <rect x="284" y="0" width="170" height="38" rx="8" fill="#0f172a"/>
+    <text x="369" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Distributed Systems</text>
+
+    <!-- Pill 4 -->
+    <rect x="466" y="0" width="160" height="38" rx="8" fill="#0f172a"/>
+    <text x="546" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Kafka &amp; Debezium</text>
+
+    <!-- Pill 5 -->
+    <rect x="638" y="0" width="165" height="38" rx="8" fill="#0f172a"/>
+    <text x="720" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">PostgreSQL &amp; Redis</text>
+
+    <!-- Pill 6 -->
+    <rect x="815" y="0" width="180" height="38" rx="8" fill="#0f172a"/>
+    <text x="905" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">7+ Yrs Production</text>
+  </g>
+
+  <!-- Bottom Details -->
+  <g transform="translate(80, 545)">
+    <text x="0" y="0" font-family="monospace" font-size="14" fill="#94a3b8">github.com/rifqicode  |  Depok, Indonesia  |  Remote Worldwide</text>
+  </g>
+</svg>

@@ -1,80 +1,81 @@
-import { useMemo, useState } from 'react';
-import SkillData from '../assets/data/Skill';
+import skillsData from '../assets/data/skills.json';
 
-const tabs = [
-  { label: 'Languages', names: ['JavaScript', 'Go', 'PHP', 'SQL'] },
-  { label: 'Backend', names: ['Gin', 'Express JS', 'Laravel', 'Symfony'] },
-  { label: 'Frontend', names: ['React JS', 'Next JS', 'Angular', 'Tailwind CSS'] },
-  { label: 'Data', names: ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'ElasticSearch'] },
-  { label: 'Streaming', names: ['Kafka', 'NSQ', 'Debezium'] },
-  { label: 'Cloud & DevOps', names: ['Docker', 'Linux', 'AWS S3', 'AWS EC2', 'AWS Lambda'] },
-  { label: 'Monitoring', names: ['Grafana'] },
-  { label: 'AI Tools', names: ['ChatGPT', 'GitHub Copilot', 'Claude', 'Claude Code', 'Cursor', 'Gemini', 'Hermes', 'OpenClaw'] },
-];
+export default function Skill({ language = 'en' }) {
+  const { skillGroups, toolIcons } = skillsData;
 
-export default function Skill() {
-  const [activeTab, setActiveTab] = useState(tabs[0].label);
-
-  const skillsByTab = useMemo(() => {
-    return tabs.reduce((acc, tab) => {
-      acc[tab.label] = tab.names
-        .map((name) => SkillData.find((item) => item.name === name))
-        .filter(Boolean);
-      return acc;
-    }, {});
-  }, []);
-
-  const activeSkills = skillsByTab[activeTab] || [];
+  const getToolIcon = (name) => {
+    return toolIcons[name] || 'fas fa-code';
+  };
 
   return (
-    <section id="tech" className="relative z-10 flex flex-col gap-6">
-      <SectionLabel text="~/tech-stack" />
+    <section id="tech" className="flex flex-col gap-6">
+      <SectionHeader
+        title={language === 'id' ? 'Keahlian & Teknologi' : 'Skills & Tech Stack'}
+        subtitle={
+          language === 'id'
+            ? 'Teknologi dan tools yang digunakan dalam membangun arsitektur backend'
+            : 'Technologies and tools used to engineer reliable backend systems'
+        }
+      />
 
-      <div className="flex flex-col gap-8 md:flex-row">
-        <div className="flex w-full flex-col gap-2 md:w-1/3 lg:w-1/4">
-          {tabs.map((tab) => {
-            const isActive = activeTab === tab.label;
-            return (
-              <button
-                key={tab.label}
-                type="button"
-                onClick={() => setActiveTab(tab.label)}
-                className={
-                  'rounded border px-4 py-3 text-left font-mono text-sm transition ' +
-                  (isActive
-                    ? 'border-primary bg-primary/5 text-primary'
-                    : 'border-white/10 text-on-surface-variant hover:border-primary/50 hover:text-primary')
-                }
-              >
-                {tab.label}
-              </button>
-            );
-          })}
-        </div>
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        {skillGroups.map((group, index) => {
+          const isFullWidth = index === skillGroups.length - 1 && skillGroups.length % 2 !== 0;
 
-        <div className="grid min-h-[200px] w-full grid-cols-2 gap-4 md:w-2/3 lg:w-3/4 lg:grid-cols-3">
-          {activeSkills.map((item) => (
+          return (
             <div
-              key={`${activeTab}-${item.name}`}
-              className="glass-card terminal-border flex cursor-default flex-col items-center justify-center gap-3 rounded-lg p-6"
+              key={group.category.en}
+              className={`clean-card flex flex-col justify-between rounded-2xl p-5 shadow-sm sm:p-6 ${
+                isFullWidth ? 'md:col-span-2' : ''
+              }`}
             >
-              <div className="flex h-12 w-12 items-center justify-center text-on-surface opacity-80 transition hover:opacity-100">
-                <i className={`${item.image} text-5xl`}></i>
+              <div>
+                <div className="flex items-center justify-between border-b border-surface-border pb-3">
+                  <h3 className="text-base font-bold text-text-primary">
+                    {group.category[language]}
+                  </h3>
+                  <span className="font-mono text-xs font-semibold text-text-muted">
+                    {group.names.length} tools
+                  </span>
+                </div>
+                <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+                  {group.description[language]}
+                </p>
               </div>
-              <span className="font-mono text-sm text-on-surface-variant">{item.name}</span>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                {group.names.map((name) => {
+                  const iconClass = getToolIcon(name);
+                  return (
+                    <div
+                      key={name}
+                      className="flex items-center gap-2 rounded-lg border border-surface-border bg-surface-subtle px-3 py-1.5 transition hover:border-surface-border-strong hover:bg-surface-muted"
+                    >
+                      <i className={`${iconClass} text-xs text-text-primary`}></i>
+                      <span className="text-xs font-medium text-text-primary">
+                        {name}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </section>
   );
 }
 
-function SectionLabel({ text }) {
+function SectionHeader({ title, subtitle }) {
   return (
-    <div className="mb-4 flex items-center gap-4">
-      <span className="font-mono text-sm text-primary">{text}</span>
-      <div className="h-px flex-grow bg-white/10" />
+    <div className="flex flex-col gap-1 border-b border-surface-border pb-4">
+      <h2 className="text-2xl font-bold tracking-tight text-text-primary">
+        {title}
+      </h2>
+      <p className="text-sm text-text-secondary">
+        {subtitle}
+      </p>
     </div>
   );
 }

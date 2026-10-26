@@ -1,0 +1,46 @@
+[
+  {
+    "name": "HPP Tracker",
+    "description": "Production SaaS application engineered for culinary (F&B) businesses to automate per-portion recipe COGS (HPP) calculation, track raw inventory using FIFO/FEFO costing methods, enforce role-based multi-outlet access control, and process subscription billing via Midtrans payment integration.",
+    "descriptionId": "Aplikasi SaaS produksi untuk bisnis kuliner (F&B) yang mengotomasi kalkulasi HPP resep per porsi, mengelola inventaris bahan baku dengan metode valuasi FIFO/FEFO, menerapkan kontrol akses multi-outlet berbasis peran, serta memproses pembayaran langganan melalui integrasi Midtrans.",
+    "icon": "calculate",
+    "badge": "Live SaaS",
+    "tags": ["React", "SaaS", "COGS Engine", "FIFO / FEFO", "Midtrans", "Multi-Tenant"],
+    "url": "https://hpp-ui.vercel.app/",
+    "githubUrl": "https://github.com/rifqicode/hpp-ui"
+  },
+  {
+    "name": "worker",
+    "description": "Distributed background worker architecture built in Go, orchestrating asynchronous tasks via Apache Kafka topic queues, persisting transactional job state in PostgreSQL, and executing jobs through bounded goroutine worker pools with backpressure control to prevent container memory exhaustion.",
+    "descriptionId": "Arsitektur background worker terdistribusi berbasis Go, mengorkestrasi tugas asinkron melalui antrean Apache Kafka, menyimpan status transaksi job di PostgreSQL, dan mengeksekusi tugas menggunakan worker pool goroutine terbatas dengan kendali backpressure guna mencegah kehabisan memori server.",
+    "icon": "settings_suggest",
+    "tags": ["Go", "Gin", "PostgreSQL", "Kafka", "Worker Pool"],
+    "url": "https://github.com/rifqicode/worker"
+  },
+  {
+    "name": "Wedding Event Platform",
+    "description": "Production event management platform featuring rate-limited WhatsApp dispatch via WAHA, dynamic per-guest OpenGraph metadata image generation, real-time on-site QR code attendance scanning backed by Supabase, and edge caching verified under k6 load tests at 200 concurrent virtual users (VUs).",
+    "descriptionId": "Platform manajemen acara skala produksi dengan otomasi pengiriman undangan WhatsApp via WAHA berjadwal anti-spam, pembuatan gambar OpenGraph dinamis per tamu, pemindaian QR code kehadiran di lokasi berbasis Supabase, dan edge caching yang divalidasi uji beban k6 pada 200 virtual user (VU) konkuren.",
+    "icon": "qr_code_scanner",
+    "badge": "Live Production",
+    "tags": ["Next.js", "TypeScript", "Supabase", "WhatsApp API", "k6 Load Testing", "QR Scanner"],
+    "url": "https://ringforeverstarts.site/andri-suroso-z8hh",
+    "githubUrl": "https://github.com/rifqicode/wedding-invitation"
+  },
+  {
+    "name": "quizer",
+    "description": "Modular RESTful backend API engineered in Go and Gin, providing stateless JWT-authenticated endpoints for categorized quiz topics, timed assessment session tracking, automated schema migrations with golang-migrate, and PostgreSQL performance analytics aggregation.",
+    "descriptionId": "RESTful backend API modular berbasis Go dan Gin, menyediakan endpoint terautentikasi JWT untuk kategorisasi bank soal, pencatatan sesi evaluasi berbatas waktu, migrasi skema database terotomasi dengan golang-migrate, dan agregasi analitik performa peserta di PostgreSQL.",
+    "icon": "quiz",
+    "tags": ["Go", "Gin", "PostgreSQL", "JWT", "golang-migrate"],
+    "url": "https://github.com/rifqicode/quizer"
+  },
+  {
+    "name": "game-tanya-jawab",
+    "description": "Real-time multiplayer trivia game engine built with Node.js, Express, and Socket.io, handling bidirectional WebSocket event broadcasting across concurrent game rooms, token-based player state validation, atomic MongoDB score increments, and live leaderboard dispatches.",
+    "descriptionId": "Engine game trivia multiplayer real-time berbasis Node.js, Express, dan Socket.io, mengelola broadcast event WebSocket dua arah lintas ruang permainan konkuren, validasi sesi pemain berbasis token, pembaruan skor atomik di MongoDB, dan penyiaran peringkat leaderboard langsung.",
+    "icon": "sports_esports",
+    "tags": ["Node.js", "Express", "Socket.io", "WebSockets", "MongoDB"],
+    "url": "https://github.com/rifqicode/game-tanya-jawab"
+  }
+]

@@ -5,10 +5,16 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta charSet="utf-8" />
+          <meta name="theme-color" content="#ffffff" />
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="manifest" href="/manifest.json" />
+
+          {/* Preconnect for Google Fonts */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Geist:wght@400..900&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400..700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
             rel="stylesheet"
           />
           <link
@@ -16,7 +22,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body>
+        <body className="bg-white text-text-primary antialiased selection:bg-black selection:text-white">
           <Main />
           <NextScript />
         </body>

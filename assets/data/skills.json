@@ -1,0 +1,91 @@
+{
+  "skillGroups": [
+    {
+      "category": {
+        "en": "Core Languages",
+        "id": "Bahasa Pemrograman"
+      },
+      "description": {
+        "en": "Primary languages for production backend services and data queries",
+        "id": "Bahasa utama untuk backend service produksi dan query data"
+      },
+      "names": ["Go", "JavaScript", "PHP", "SQL"]
+    },
+    {
+      "category": {
+        "en": "Databases & Streaming",
+        "id": "Database & Event Streaming"
+      },
+      "description": {
+        "en": "Persistent storage, high-throughput caching, message queues, and CDC",
+        "id": "Penyimpanan persisten, caching berkinerja tinggi, message broker, dan CDC"
+      },
+      "names": ["PostgreSQL", "Redis", "Kafka", "Debezium", "MongoDB", "MySQL", "ElasticSearch", "NSQ"]
+    },
+    {
+      "category": {
+        "en": "Frameworks & Libraries",
+        "id": "Framework & Library"
+      },
+      "description": {
+        "en": "Backend microservices, web frameworks, and application layer tools",
+        "id": "Microservices backend, web framework, dan komponen layer aplikasi"
+      },
+      "names": ["Gin", "Express JS", "Laravel", "Symfony", "React JS", "Next JS", "Tailwind CSS"]
+    },
+    {
+      "category": {
+        "en": "Cloud & DevOps",
+        "id": "Cloud & DevOps"
+      },
+      "description": {
+        "en": "Containerization, orchestration, cloud infrastructure, and observability",
+        "id": "Kontainerisasi, orkestrasi kluster, infrastruktur cloud, dan observabilitas"
+      },
+      "names": ["Docker", "Kubernetes", "AWS EC2", "AWS S3", "AWS Lambda", "Grafana"]
+    },
+    {
+      "category": {
+        "en": "AI Workflows & Tooling",
+        "id": "AI Workflows & Tooling"
+      },
+      "description": {
+        "en": "Agentic coding workflows, automated debugging, and modern AI acceleration",
+        "id": "Workflow coding agentik, otomasi debugging, dan akselerasi engineering berbasis AI"
+      },
+      "names": ["Claude Code", "GitHub Copilot", "Cursor", "ChatGPT", "Gemini"]
+    }
+  ],
+  "toolIcons": {
+    "Go": "devicon-go-original-wordmark colored",
+    "JavaScript": "devicon-javascript-plain colored",
+    "PHP": "devicon-php-plain colored",
+    "SQL": "devicon-postgresql-plain colored",
+    "PostgreSQL": "devicon-postgresql-plain colored",
+    "Redis": "devicon-redis-plain colored",
+    "Kafka": "devicon-apachekafka-original colored",
+    "Debezium": "fas fa-database",
+    "MongoDB": "devicon-mongodb-plain colored",
+    "MySQL": "devicon-mysql-plain colored",
+    "ElasticSearch": "devicon-elasticsearch-plain colored",
+    "NSQ": "fas fa-stream",
+    "Gin": "devicon-go-original-wordmark colored",
+    "Express JS": "devicon-express-original colored",
+    "Laravel": "devicon-laravel-plain colored",
+    "Symfony": "devicon-symfony-original colored",
+    "React JS": "devicon-react-original colored",
+    "Next JS": "devicon-nextjs-original-wordmark colored",
+    "Tailwind CSS": "devicon-tailwindcss-plain colored",
+    "Docker": "devicon-docker-plain colored",
+    "Kubernetes": "devicon-kubernetes-plain colored",
+    "AWS EC2": "devicon-amazonwebservices-plain colored",
+    "AWS S3": "devicon-amazonwebservices-plain colored",
+    "AWS Lambda": "devicon-amazonwebservices-plain colored",
+    "Grafana": "devicon-grafana-plain",
+    "Claude Code": "fas fa-terminal",
+    "GitHub Copilot": "fas fa-robot",
+    "Cursor": "fas fa-code",
+    "ChatGPT": "fas fa-robot",
+    "Gemini": "fas fa-terminal"
+  }
+}

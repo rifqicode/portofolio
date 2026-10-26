@@ -1,0 +1,56 @@
+{
+  "name": "Muhammad Rifqi Imam Saputra",
+  "shortName": "Muhammad Rifqi",
+  "email": "muhammadrifqi.tb@gmail.com",
+  "whatsapp": "6282123073107",
+  "cvUrl": "/Muhammad-Rifqi-Imam-Saputra-CV.pdf",
+  "githubUrl": "https://github.com/rifqicode",
+  "roleHeadline": {
+    "en": "Backend Engineer with 7+ years of experience specializing in distributed systems, event-driven architecture, and high-throughput API integrations.",
+    "id": "Backend Engineer berpengalaman 7+ tahun dengan spesialisasi sistem terdistribusi, arsitektur event-driven, dan integrasi API berkinerja tinggi."
+  },
+  "education": {
+    "en": "BINUS University - Information Systems (2024 - Present)",
+    "id": "Universitas BINUS - Sistem Informasi (2024 - Sekarang)"
+  },
+  "location": {
+    "en": "Depok, Indonesia (Open to Remote Worldwide)",
+    "id": "Depok, Indonesia (Terbuka untuk Remote Global)"
+  },
+  "summary": {
+    "en": "Senior Backend & Site Reliability Engineer with 7+ years of hands-on experience designing, scaling, and operating distributed systems across core SaaS platforms and dedicated enterprise on-premise deployments (Danone, MyPertamina, BCA Syariah, Adira Finance). Proven track record owning complex initiatives end-to-end: engineered autonomous AI-driven incident triage bots (SRE Assistant) in Lark, shipped rapid production hotfixes resolving critical race conditions, re-architected legacy authentication into Go within 1 month, maintained high-throughput background worker monorepos, and built real-time CDC aggregation pipelines with Debezium and Kafka.",
+    "id": "Senior Backend & Site Reliability Engineer dengan 7+ tahun pengalaman merancang, mengembangkan, dan mengoperasikan sistem terdistribusi pada platform inti SaaS serta instalasi enterprise on-premise (Danone, MyPertamina, BCA Syariah, Adira Finance). Terbukti mengeksekusi inisiatif teknis kompleks secara end-to-end: membangun bot triage insiden otonom berbasis AI (SRE Assistant) di Lark, merilis hotfix produksi cepat untuk mengatasi race condition kritis, merancang ulang layanan autentikasi ke Go dalam 1 bulan, mengelola monorepo worker asinkron, dan membangun pipeline agregasi CDC real-time berbasis Debezium dan Kafka."
+  },
+  "architectureTitle": {
+    "en": "Core Architecture Patterns & Production Engineering",
+    "id": "Pola Arsitektur Inti & Praktik Rekayasa Produksi"
+  },
+  "architectureConcepts": [
+    "Event-Driven Architecture (Kafka)",
+    "Change Data Capture (Debezium CDC)",
+    "Single Source of Truth (SSOT)",
+    "Configurable Fraud Detection Engines",
+    "Backward-Compatible Go Migrations",
+    "Bounded Concurrency & Worker Pools",
+    "Idempotent Webhooks & API Ingestion",
+    "Eventual Consistency & Distributed Stores"
+  ],
+  "labels": {
+    "contactDirect": {
+      "en": "Get in Touch",
+      "id": "Hubungi Langsung"
+    },
+    "downloadCV": {
+      "en": "Download CV",
+      "id": "Unduh CV"
+    },
+    "copyEmail": {
+      "en": "Copy Email",
+      "id": "Salin Email"
+    },
+    "copiedEmail": {
+      "en": "Email Copied",
+      "id": "Email Tersalin"
+    }
+  }
+}

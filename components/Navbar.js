@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
-import BiodataData from '../assets/data/Biodata';
+import biodata from '../assets/data/biodata.json';
 
 const navItems = [
-  { label: { en: 'Home', id: 'Beranda' }, href: '#home' },
-  { label: { en: 'Tech Stack', id: 'Tech Stack' }, href: '#tech' },
+  { label: { en: 'About', id: 'Tentang' }, href: '#home' },
   { label: { en: 'Experience', id: 'Pengalaman' }, href: '#experience' },
+  { label: { en: 'Tech Stack', id: 'Tech Stack' }, href: '#tech' },
   { label: { en: 'Projects', id: 'Proyek' }, href: '#projects' },
 ];
 
 export default function Navbar({ language = 'en', onLanguageChange }) {
   const [activeHref, setActiveHref] = useState(navItems[0].href);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const sections = navItems
@@ -17,13 +19,14 @@ export default function Navbar({ language = 'en', onLanguageChange }) {
       .filter(Boolean)
       .sort((a, b) => a.offsetTop - b.offsetTop);
 
-    if (!sections.length) {
-      return undefined;
-    }
+    if (!sections.length) return undefined;
 
     const handleScroll = () => {
-      const isAtPageBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 24;
-      const scrollPosition = window.scrollY + window.innerHeight * 0.4;
+      setIsScrolled(window.scrollY > 20);
+
+      const isAtPageBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 32;
+      const scrollPosition = window.scrollY + window.innerHeight * 0.35;
 
       if (isAtPageBottom) {
         setActiveHref(`#${sections[sections.length - 1].id}`);
@@ -47,25 +50,40 @@ export default function Navbar({ language = 'en', onLanguageChange }) {
     };
   }, []);
 
+  const handleNavClick = (href) => {
+    setActiveHref(href);
+    setMobileMenuOpen(false);
+  };
+
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-background/70 text-on-surface backdrop-blur-md">
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4 md:px-8">
-        <a href="#home" className="font-mono text-sm font-bold uppercase tracking-tight">
-          {BiodataData.shortName}
+    <header
+      className={
+        'sticky top-0 z-50 transition-all duration-300 ' +
+        (isScrolled
+          ? 'border-b border-surface-border/80 bg-white/70 shadow-sm backdrop-blur-md'
+          : 'border-b border-surface-border/40 bg-white/90 backdrop-blur-md')
+      }
+    >
+      <div className="mx-auto flex max-w-[960px] items-center justify-between px-6 py-3.5 md:px-8">
+        <a
+          href="#home"
+          onClick={() => handleNavClick('#home')}
+          className="font-bold tracking-tight text-text-primary transition hover:opacity-80"
+        >
+          {biodata.shortName}
         </a>
 
-        <nav className="hidden items-center gap-8 font-mono text-xs md:flex">
+        {/* Desktop Navigation */}
+        <nav className="hidden items-center gap-7 text-sm font-medium text-text-secondary md:flex">
           {navItems.map((item) => {
             const isActive = activeHref === item.href;
-
             return (
               <a
                 key={item.href}
                 href={item.href}
                 className={
-                  isActive
-                    ? 'border-b-2 border-primary pb-1 font-bold text-primary transition hover:text-primary-fixed'
-                    : 'border-b-2 border-transparent pb-1 text-on-surface-variant transition hover:text-primary'
+                  'transition-colors ' +
+                  (isActive ? 'font-semibold text-black' : 'hover:text-black')
                 }
               >
                 {item.label[language]}
@@ -74,21 +92,25 @@ export default function Navbar({ language = 'en', onLanguageChange }) {
           })}
         </nav>
 
-        <div className="flex items-center gap-4">
-          <div className="flex rounded border border-white/10 bg-surface-low p-0.5 font-mono text-[11px]">
+        {/* Actions & Controls */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          {/* Language Switcher */}
+          <div className="flex items-center rounded-lg border border-surface-border bg-surface-muted/80 p-0.5 text-xs font-medium">
             {['en', 'id'].map((item) => {
               const isActive = language === item;
-
               return (
                 <button
                   key={item}
                   type="button"
                   onClick={() => onLanguageChange?.(item)}
                   className={
-                    'rounded px-2 py-1 uppercase transition ' +
-                    (isActive ? 'bg-primary text-[#001f26]' : 'text-on-surface-variant hover:text-primary')
+                    'rounded-md px-2.5 py-1 uppercase transition-all ' +
+                    (isActive
+                      ? 'bg-white font-semibold text-black shadow-sm'
+                      : 'text-text-muted hover:text-black')
                   }
                   aria-pressed={isActive}
+                  aria-label={`Switch language to ${item.toUpperCase()}`}
                 >
                   {item}
                 </button>
@@ -96,25 +118,84 @@ export default function Navbar({ language = 'en', onLanguageChange }) {
             })}
           </div>
 
+          {/* GitHub link */}
           <a
-            href="https://github.com/rifqicode"
+            href={biodata.githubUrl}
             target="_blank"
             rel="noreferrer"
-            aria-label="Open GitHub profile"
-            className="hidden text-on-surface transition hover:text-primary sm:inline-flex"
+            aria-label="GitHub profile"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-surface-border bg-white/60 text-text-secondary transition hover:border-surface-border-strong hover:text-black"
           >
-            <span className="material-symbols-outlined text-[20px]">terminal</span>
+            <i className="fab fa-github text-sm"></i>
           </a>
+
+          {/* Desktop CV CTA */}
           <a
-            href={BiodataData.cvUrl}
+            href={biodata.cvUrl}
             target="_blank"
             rel="noreferrer"
-            className="hidden rounded bg-primary px-4 py-2 font-mono text-xs font-bold text-[#001f26] transition hover:bg-primary-fixed md:inline-flex"
+            className="hidden items-center gap-1.5 rounded-lg bg-black px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-neutral-800 sm:inline-flex"
           >
-            {language === 'id' ? 'Unduh CV' : 'Download CV'}
+            <span className="material-symbols-outlined text-[15px]">download</span>
+            <span>{biodata.labels.downloadCV[language]}</span>
           </a>
+
+          {/* Mobile Menu Button */}
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-surface-border bg-white/60 text-text-secondary transition hover:border-surface-border-strong hover:text-black md:hidden"
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
+          >
+            <span className="material-symbols-outlined text-[20px]">
+              {mobileMenuOpen ? 'close' : 'menu'}
+            </span>
+          </button>
         </div>
       </div>
+
+      {/* Mobile Navigation Drawer */}
+      {mobileMenuOpen && (
+        <nav
+          className="border-t border-surface-border bg-white/95 px-6 py-4 shadow-subtle backdrop-blur-md md:hidden"
+          aria-label="Mobile Navigation"
+        >
+          <div className="flex flex-col gap-1">
+            {navItems.map((item) => {
+              const isActive = activeHref === item.href;
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => handleNavClick(item.href)}
+                  className={
+                    'flex items-center justify-between rounded-lg px-3 py-2.5 text-sm transition-colors ' +
+                    (isActive
+                      ? 'bg-surface-muted font-semibold text-black'
+                      : 'text-text-secondary hover:bg-surface-subtle hover:text-black')
+                  }
+                >
+                  <span>{item.label[language]}</span>
+                  {isActive && <span className="h-1.5 w-1.5 rounded-full bg-black" />}
+                </a>
+              );
+            })}
+
+            <div className="mt-3 border-t border-surface-border pt-3">
+              <a
+                href={biodata.cvUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-black py-2.5 text-xs font-semibold text-white transition hover:bg-neutral-800"
+              >
+                <span className="material-symbols-outlined text-[16px]">download</span>
+                <span>{biodata.labels.downloadCV[language]}</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      )}
     </header>
   );
 }
