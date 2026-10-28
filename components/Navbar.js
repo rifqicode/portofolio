@@ -64,11 +64,11 @@ export default function Navbar({ language = 'en', onLanguageChange }) {
           : 'border-b border-surface-border/40 bg-white/90 backdrop-blur-md')
       }
     >
-      <div className="mx-auto flex max-w-[960px] items-center justify-between px-6 py-3.5 md:px-8">
+      <div className="mx-auto flex max-w-[960px] items-center justify-between gap-2 px-4 py-2 sm:px-6 sm:py-3.5 md:px-8">
         <a
           href="#home"
           onClick={() => handleNavClick('#home')}
-          className="font-bold tracking-tight text-text-primary transition hover:opacity-80"
+          className="flex min-h-[44px] items-center text-sm sm:text-base font-bold tracking-tight text-text-primary transition hover:opacity-80"
         >
           {biodata.shortName}
         </a>
@@ -104,7 +104,7 @@ export default function Navbar({ language = 'en', onLanguageChange }) {
                   type="button"
                   onClick={() => onLanguageChange?.(item)}
                   className={
-                    'rounded-md px-2.5 py-1 uppercase transition-all ' +
+                    'flex min-h-[44px] min-w-[40px] items-center justify-center rounded-md px-2 py-1 uppercase transition-all ' +
                     (isActive
                       ? 'bg-white font-semibold text-black shadow-sm'
                       : 'text-text-muted hover:text-black')
@@ -118,39 +118,19 @@ export default function Navbar({ language = 'en', onLanguageChange }) {
             })}
           </div>
 
-          {/* GitHub link */}
-          <a
-            href={biodata.githubUrl}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub profile"
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-surface-border bg-white/60 text-text-secondary transition hover:border-surface-border-strong hover:text-black"
-          >
-            <i className="fab fa-github text-sm"></i>
-          </a>
-
-          {/* Desktop CV CTA */}
-          <a
-            href={biodata.cvUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="hidden items-center gap-1.5 rounded-lg bg-black px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-neutral-800 sm:inline-flex"
-          >
-            <span className="material-symbols-outlined text-[15px]">download</span>
-            <span>{biodata.labels.downloadCV[language]}</span>
-          </a>
-
           {/* Mobile Menu Button */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-surface-border bg-white/60 text-text-secondary transition hover:border-surface-border-strong hover:text-black md:hidden"
+            className="flex min-h-[44px] items-center justify-center gap-1 rounded-lg px-2 border border-surface-border bg-white/60 text-text-secondary transition hover:border-surface-border-strong hover:text-black md:hidden"
             aria-label="Toggle navigation menu"
             aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             <span className="material-symbols-outlined text-[20px]">
               {mobileMenuOpen ? 'close' : 'menu'}
             </span>
+            <span className="text-xs font-medium">Menu</span>
           </button>
         </div>
       </div>
@@ -158,7 +138,8 @@ export default function Navbar({ language = 'en', onLanguageChange }) {
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
         <nav
-          className="border-t border-surface-border bg-white/95 px-6 py-4 shadow-subtle backdrop-blur-md md:hidden"
+          id="mobile-navigation"
+          className="border-t border-surface-border bg-white/95 px-4 py-3 shadow-subtle backdrop-blur-md md:hidden"
           aria-label="Mobile Navigation"
         >
           <div className="flex flex-col gap-1">
@@ -170,7 +151,7 @@ export default function Navbar({ language = 'en', onLanguageChange }) {
                   href={item.href}
                   onClick={() => handleNavClick(item.href)}
                   className={
-                    'flex items-center justify-between rounded-lg px-3 py-2.5 text-sm transition-colors ' +
+                    'flex min-h-[44px] items-center justify-between rounded-lg px-3 py-2.5 text-sm transition-colors ' +
                     (isActive
                       ? 'bg-surface-muted font-semibold text-black'
                       : 'text-text-secondary hover:bg-surface-subtle hover:text-black')
@@ -182,17 +163,6 @@ export default function Navbar({ language = 'en', onLanguageChange }) {
               );
             })}
 
-            <div className="mt-3 border-t border-surface-border pt-3">
-              <a
-                href={biodata.cvUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="flex w-full items-center justify-center gap-2 rounded-lg bg-black py-2.5 text-xs font-semibold text-white transition hover:bg-neutral-800"
-              >
-                <span className="material-symbols-outlined text-[16px]">download</span>
-                <span>{biodata.labels.downloadCV[language]}</span>
-              </a>
-            </div>
           </div>
         </nav>
       )}

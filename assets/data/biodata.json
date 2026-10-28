@@ -6,39 +6,35 @@
   "cvUrl": "/Muhammad-Rifqi-Imam-Saputra-CV.pdf",
   "githubUrl": "https://github.com/rifqicode",
   "roleHeadline": {
-    "en": "Backend Engineer with 7+ years of experience specializing in distributed systems, event-driven architecture, and high-throughput API integrations.",
-    "id": "Backend Engineer berpengalaman 7+ tahun dengan spesialisasi sistem terdistribusi, arsitektur event-driven, dan integrasi API berkinerja tinggi."
+    "en": "Fullstack Engineer with 7+ years of experience building distributed systems, event-driven applications, and API integrations for high-throughput workloads.",
+    "id": "Fullstack Engineer dengan pengalaman lebih dari 7 tahun membangun distributed systems, aplikasi berbasis event-driven architecture, dan integrasi API untuk kebutuhan high-throughput."
   },
   "education": {
     "en": "BINUS University - Information Systems (2024 - Present)",
     "id": "Universitas BINUS - Sistem Informasi (2024 - Sekarang)"
   },
   "location": {
-    "en": "Depok, Indonesia (Open to Remote Worldwide)",
-    "id": "Depok, Indonesia (Terbuka untuk Remote Global)"
+    "en": "Depok, Indonesia · Open to opportunities, including global remote roles",
+    "id": "Depok, Indonesia · Terbuka untuk peluang kerja, termasuk remote global"
   },
   "summary": {
-    "en": "Senior Backend & Site Reliability Engineer with 7+ years of hands-on experience designing, scaling, and operating distributed systems across core SaaS platforms and dedicated enterprise on-premise deployments (Danone, MyPertamina, BCA Syariah, Adira Finance). Proven track record owning complex initiatives end-to-end: engineered autonomous AI-driven incident triage bots (SRE Assistant) in Lark, shipped rapid production hotfixes resolving critical race conditions, re-architected legacy authentication into Go within 1 month, maintained high-throughput background worker monorepos, and built real-time CDC aggregation pipelines with Debezium and Kafka.",
-    "id": "Senior Backend & Site Reliability Engineer dengan 7+ tahun pengalaman merancang, mengembangkan, dan mengoperasikan sistem terdistribusi pada platform inti SaaS serta instalasi enterprise on-premise (Danone, MyPertamina, BCA Syariah, Adira Finance). Terbukti mengeksekusi inisiatif teknis kompleks secara end-to-end: membangun bot triage insiden otonom berbasis AI (SRE Assistant) di Lark, merilis hotfix produksi cepat untuk mengatasi race condition kritis, merancang ulang layanan autentikasi ke Go dalam 1 bulan, mengelola monorepo worker asinkron, dan membangun pipeline agregasi CDC real-time berbasis Debezium dan Kafka."
+    "en": "I'm a Senior Backend & Site Reliability Engineer with over 7 years of experience designing, scaling, and running distributed systems for core SaaS platforms and enterprise on-premise deployments, including Danone, MyPertamina, BCA Syariah, and Adira Finance. I take projects from design through production, with work ranging from an autonomous AI incident triage bot in Lark (SRE Assistant) to production hotfixes for critical race conditions. I've also rebuilt a legacy authentication service in Go within a month, maintained monorepos for high-throughput background workers, and built real-time CDC aggregation pipelines with Debezium and Kafka.",
+    "id": "Saya seorang Senior Backend & Site Reliability Engineer dengan pengalaman lebih dari 7 tahun merancang, mengembangkan, dan mengoperasikan distributed systems untuk platform inti SaaS serta deployment enterprise on-premise, termasuk Danone, MyPertamina, BCA Syariah, dan Adira Finance. Saya menangani proyek dari tahap desain hingga production, mulai dari membangun bot AI untuk incident triage otomatis di Lark (SRE Assistant) sampai merilis hotfix untuk mengatasi race condition kritis. Saya juga pernah membangun ulang layanan authentication lama menggunakan Go dalam satu bulan, mengelola monorepo untuk background worker dengan kebutuhan high-throughput, dan membangun pipeline agregasi CDC secara real-time menggunakan Debezium dan Kafka."
   },
   "architectureTitle": {
-    "en": "Core Architecture Patterns & Production Engineering",
-    "id": "Pola Arsitektur Inti & Praktik Rekayasa Produksi"
+    "en": "Technical Focus",
+    "id": "Fokus Teknis"
   },
   "architectureConcepts": [
-    "Event-Driven Architecture (Kafka)",
-    "Change Data Capture (Debezium CDC)",
-    "Single Source of Truth (SSOT)",
-    "Configurable Fraud Detection Engines",
-    "Backward-Compatible Go Migrations",
-    "Bounded Concurrency & Worker Pools",
-    "Idempotent Webhooks & API Ingestion",
-    "Eventual Consistency & Distributed Stores"
+    "Event-Driven Architecture",
+    "Change Data Capture",
+    "Microservices",
+    "Monorepos"
   ],
   "labels": {
     "contactDirect": {
       "en": "Get in Touch",
-      "id": "Hubungi Langsung"
+      "id": "Hubungi Saya"
     },
     "downloadCV": {
       "en": "Download CV",

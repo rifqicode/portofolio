@@ -6,104 +6,124 @@
     "tracks": [
       {
         "team": {
-          "en": "Site Reliability Engineering (SRE Team) - Incident Triage, Automation & Hotfixes",
-          "id": "Site Reliability Engineering (Tim SRE) - Triage Insiden, Otomasi & Hotfix"
+          "en": "Site Reliability Engineering",
+          "id": "Site Reliability Engineering"
         },
-        "techStack": ["Node.js", "Bash", "PostgreSQL", "Elasticsearch", "Grafana", "Loki", "Claude Code", "Lark API", "Docker", "Linux"],
+        "techStack": ["Node.js", "Bash", "PostgreSQL", "Elasticsearch", "Grafana", "Loki", "Claude Code", "Lark API", "Docker", "Kubernetes", "GitLab CI/CD", "Linux"],
         "workDetails": [
           {
-            "description": "Architected and built SRE Assistant, an autonomous AI-driven incident investigation bot in Lark that classifies incoming alerts, syncs environment git worktrees, inspects Grafana telemetry, and queries read-only production APIs, cutting mean time to resolution (MTTR) for multi-service incidents.",
-            "descriptionId": "Merancang dan membangun SRE Assistant, bot investigasi insiden otonom berbasis AI di Lark yang mengklasifikasikan tiket berdasarkan konteks klien, menyinkronkan git worktree lingkungan terkait, menganalisis telemetri Grafana, dan memeriksa API produksi secara aman, memangkas waktu investigasi akar masalah (MTTR) secara signifikan."
+            "description": "Built SRE Assistant, an AI assistant that helps investigate issues within each project's scope by reviewing the codebase and Grafana telemetry.",
+            "descriptionId": "Membangun SRE Assistant, AI assistant yang membantu investigasi issue sesuai scope project dengan memeriksa codebase dan telemetry di Grafana."
           },
           {
-            "description": "Led production incident triage, root-cause investigation, and issue tracking across high-profile enterprise on-premise deployments (Danone One Loyalty Hub, MyPertamina, BCA Syariah, and Adira Finance), safeguarding operational continuity for 7M+ monthly requests.",
-            "descriptionId": "Memimpin penanganan insiden produksi, pelacakan tiket, dan analisis akar masalah lintas instalasi enterprise on-premise (Danone One Loyalty Hub, MyPertamina, BCA Syariah, dan Adira Finance), menjaga kelancaran operasional untuk 7M+ request bulanan."
+            "description": "Set up Grafana alerts and automated notifications to support issue monitoring.",
+            "descriptionId": "Menyiapkan alert Grafana dan notifikasi otomatis untuk membantu monitoring issue."
           },
           {
-            "description": "Diagnosed and eliminated critical production race conditions on asynchronous webhook callbacks (OS-38) via PostgreSQL row-level pessimistic locking (t.LOCK.UPDATE), monotonic state transition hierarchies, and two-phase compensation to prevent orders sticking in processing states.",
-            "descriptionId": "Mendiagnosis dan mengeliminasi race condition produksi kritis pada callback webhook asinkron (OS-38) melalui penerapan row-level locking (t.LOCK.UPDATE) di PostgreSQL, hierarki status monotonik anti-downgrade, dan kompensasi dua fase untuk mencegah order tertahan permanen di status on-process."
+            "description": "Automated data validation and reporting to Google Docs to support routine operational checks.",
+            "descriptionId": "Mengotomatisasi data validation dan pembuatan report ke Google Docs untuk mendukung pengecekan operasional rutin."
           },
           {
-            "description": "Architected resilient timeout recovery for high-concurrency multi-redeem QR code scans (OS-30), engineering an asynchronous NSQ retry event publisher across core client services to guarantee zero orphaned voucher redemptions under network drops.",
-            "descriptionId": "Merancang pemulihan timeout untuk pemindaian QR multi-redeem berkonkurensi tinggi (OS-30), mengimplementasikan penerbitan event retry asinkron via antrean NSQ lintas service klien untuk menjamin tidak ada voucher yang menggantung saat terjadi gangguan jaringan."
+            "description": "Wrote scripts to automatically check data synchronization between PostgreSQL and Elasticsearch and identify inconsistencies.",
+            "descriptionId": "Membuat script untuk mengecek sinkronisasi data PostgreSQL dan Elasticsearch secara otomatis serta mengidentifikasi inkonsistensi data."
           },
           {
-            "description": "Engineered automated cross-datastore reconciliation tools in Bash and Node.js validating consistency between primary PostgreSQL databases and distributed Elasticsearch clusters, resolving daily transaction and card synchronization discrepancies across millions of records.",
-            "descriptionId": "Membangun tool rekonsiliasi data terotomasi berbasis Bash dan Node.js yang memvalidasi konsistensi antara database relasional PostgreSQL dan klaster Elasticsearch, menyelesaikan selisih sinkronisasi transaksi harian pada jutaan record data."
+            "description": "Handled client issue tickets, including investigating issues, documenting root-cause analysis (RCA), and creating hotfixes.",
+            "descriptionId": "Menangani ticket issue dari klien, mulai dari investigasi issue, penyusunan dokumen root-cause analysis (RCA), hingga pembuatan hotfix."
           },
           {
-            "description": "Developed remote administrative automation scripts driving SSH operations through Guacamole WebSocket tunnels and headless browser automation, standardizing safe maintenance runs in isolated production environments.",
-            "descriptionId": "Mengembangkan script otomasi operasi jarak jauh melalui terowongan WebSocket Guacamole dan otomasi browser headless, menstandarisasi eksekusi pemeliharaan yang aman pada lingkungan produksi terisolasi."
+            "description": "Handled application deployments using Kubernetes.",
+            "descriptionId": "Menangani deployment aplikasi menggunakan Kubernetes."
+          },
+          {
+            "description": "Created GitLab CI/CD pipelines to automate security checks.",
+            "descriptionId": "Membuat pipeline GitLab CI/CD untuk menjalankan security checks secara otomatis."
+          },
+          {
+            "description": "Developed eVoucher features for MyPertamina covering BBM Product and Source of Fund CRUD APIs, program redeem rules and validation, and an isTransferrable configuration to control voucher transfers.",
+            "descriptionId": "Mengembangkan fitur eVoucher untuk MyPertamina yang mencakup API CRUD BBM Product dan Source of Fund, konfigurasi dan validasi redeem rule pada program, serta pengaturan isTransferrable untuk mengontrol transfer voucher."
           }
         ]
       },
       {
         "team": {
-          "en": "Core Platform & Distributed Systems (Backend Team) - SaaS Core Services",
-          "id": "Platform Inti & Sistem Terdistribusi (Tim Backend) - Layanan Core SaaS"
+          "en": "Core Platform",
+          "id": "Core Platform"
         },
         "techStack": ["Go", "Gin", "PostgreSQL", "Kafka", "Debezium", "Redis", "Docker", "Node.js", "AWS"],
         "workDetails": [
           {
-            "description": "Rewrote the core SaaS authentication service in Go within 1 month, migrating from an end-of-life Node.js v10 runtime with full backward compatibility to eliminate legacy security vulnerabilities and unblock new product feature delivery.",
-            "descriptionId": "Menulis ulang layanan autentikasi inti SaaS ke Go dalam waktu 1 bulan, bermigrasi dari runtime Node.js v10 yang end-of-life dengan backward compatibility penuh untuk mengeliminasi celah keamanan lawas dan mempercepat delivery fitur baru."
+            "description": "Rebuilt the core SaaS authentication service in Go within one month, replacing an end-of-life Node.js v10 runtime while preserving backward compatibility, addressing legacy security vulnerabilities, and enabling new features.",
+            "descriptionId": "Membangun ulang layanan authentication inti SaaS menggunakan Go dalam satu bulan untuk menggantikan runtime Node.js v10 yang sudah end-of-life. Migrasi ini mempertahankan backward compatibility, mengatasi celah keamanan lama, dan mendukung pengembangan fitur baru."
           },
           {
-            "description": "Maintained and scaled the SaaS background worker monorepo (runners, worker-controller, worker-extractor), orchestrating asynchronous background runners, batch customer rewards, and atomic card balance and wallet unifications (BTX-690).",
-            "descriptionId": "Mengembangkan dan mengelola monorepo background worker SaaS (runners, worker-controller, worker-extractor), mengorkestrasi puluhan runner asinkron, pemrosesan batch reward nasabah, dan unifikasi saldo kartu serta dompet secara atomik (BTX-690)."
+            "description": "Maintained and scaled the SaaS background worker monorepo, covering asynchronous runners, batch customer rewards, and atomic card balance and wallet unification.",
+            "descriptionId": "Mengelola dan mengembangkan monorepo background worker SaaS untuk asynchronous runner, pemrosesan reward pelanggan secara batch, serta penyatuan saldo kartu dan wallet secara atomic."
           },
           {
-            "description": "Engineered the Custom Variant Order Architecture and batch catalog categorization in the inventory microservice, supporting high-cardinality SKU search, multi-attribute product matrices, and streaming catalog exports while optimizing query execution plans under heavy merchant read traffic.",
-            "descriptionId": "Membangun arsitektur Custom Variant Order dan kategorisasi katalog batch pada microservice inventaris, mendukung pencarian multi-SKU, matriks produk multi-atribut, dan ekspor data katalog dengan optimasi query plan di bawah trafik baca merchant yang tinggi."
+            "description": "Built Custom Variant Order support and batch catalog categorization in the inventory microservice, including high-cardinality SKU search, multi-attribute product variants, and streaming catalog exports. Optimized query plans for heavy merchant read traffic.",
+            "descriptionId": "Membangun fitur Custom Variant Order dan kategorisasi katalog secara batch pada microservice inventory, termasuk pencarian SKU dengan cardinality tinggi, varian produk multi-attribute, dan streaming export katalog. Mengoptimalkan query plan untuk menangani read traffic merchant yang tinggi."
           },
           {
-            "description": "Co-designed and shipped a configurable rule-based fraud detection engine (Fraud Manager v2) in under 2 weeks, replacing rigid legacy code with an operator dashboard where business teams define per-transaction thresholds, auto-lock triggers, and rejection rules without code deployments, directly curtailing financial loss exposure.",
-            "descriptionId": "Ikut merancang dan merilis engine deteksi fraud berbasis aturan (Fraud Manager v2) dalam waktu kurang dari 2 minggu, menggantikan logic hardcoded lawas dengan kontrol dashboard bagi tim operasional untuk menentukan ambang batas transaksi, pemicu auto-lock, dan aturan penolakan tanpa ketergantungan deployment teknis, sehingga langsung menekan risiko kerugian finansial."
+            "description": "Designed and shipped Fraud Manager v2 in under two weeks. Replaced hardcoded fraud rules with a dashboard where operations teams can configure transaction thresholds, auto-lock triggers, and rejection rules without a code deployment, helping reduce financial risk.",
+            "descriptionId": "Merancang dan merilis Fraud Manager v2 dalam waktu kurang dari dua minggu. Mengganti fraud rule yang hardcoded dengan dashboard agar tim operasional bisa mengatur transaction threshold, auto-lock trigger, dan rejection rule tanpa deployment kode, sehingga membantu mengurangi risiko kerugian finansial."
           },
           {
-            "description": "Architected a real-time data aggregation pipeline utilizing Debezium CDC and Apache Kafka to synchronize state across distributed microservices into a unified single source of truth (SSOT), resolving cross-service data divergence and boosting reporting accuracy.",
-            "descriptionId": "Merancang pipeline agregasi data real-time menggunakan Debezium CDC dan Apache Kafka untuk menyinkronkan status lintas microservices ke dalam satu single source of truth (SSOT), meniadakan inkonsistensi data antar-layanan dan meningkatkan akurasi laporan analitik."
+            "description": "Designed a real-time aggregation pipeline with Debezium CDC and Apache Kafka to synchronize data across microservices into a single source of truth, resolving data inconsistencies and improving reporting accuracy.",
+            "descriptionId": "Merancang pipeline agregasi real-time dengan Debezium CDC dan Apache Kafka untuk menyinkronkan data antar-microservice ke satu single source of truth, mengatasi inkonsistensi data, dan meningkatkan akurasi laporan."
           },
           {
-            "description": "Authored and maintained core shared enterprise libraries including @usetada/error-client-node, standardizing error taxonomy, HTTP status mapping, and domain exception contracts across all distributed Node.js microservices.",
-            "descriptionId": "Menulis dan memelihara library internal bersama termasuk @usetada/error-client-node, menstandarisasi taksonomi error, pemetaan status HTTP, dan kontrak pengecualian domain lintas microservices Node.js."
+            "description": "Built a WhatsApp template creation API supporting multiple vendors, including vFirst, Meta, and Bahasa AI.",
+            "descriptionId": "Membangun API untuk membuat template WhatsApp yang mendukung beberapa vendor, termasuk vFirst, Meta, dan Bahasa AI."
           },
           {
-            "description": "Maintained high-throughput Go microservices including services/squirrel, a low-latency URL redirection and click-tracking engine powering production short-links across tada.ly domains under heavy traffic.",
-            "descriptionId": "Mengelola microservices Go berkinerja tinggi termasuk services/squirrel, engine URL shortener dan pelacakan analitik klik berlatensi rendah untuk domain tada.ly di bawah volume trafik masif."
+            "description": "Built a WhatsApp login flow where users request a login link through the TADA WhatsApp chatbot, with request validation and secure token generation to reduce OTP costs.",
+            "descriptionId": "Membangun login flow melalui WhatsApp, di mana user secara aktif meminta link login lewat chatbot WhatsApp TADA. Flow ini mencakup validasi request dan generate token secara secure untuk mengurangi biaya OTP."
           },
           {
-            "description": "Integrated Claude Code into engineering workflows for automated test authoring, code refactoring, and root-cause debugging, accelerating feature delivery cycles.",
-            "descriptionId": "Mengintegrasikan Claude Code ke alur kerja harian untuk penyusunan automated test, refactoring kode, dan debugging akar masalah, mempercepat siklus pengiriman fitur."
+            "description": "Implemented sensitive data masking across API endpoints.",
+            "descriptionId": "Menerapkan masking untuk sensitive data di berbagai API endpoint."
+          },
+          {
+            "description": "Handled secure card and balance migration flows, addressing race conditions and using the saga pattern to recover from service failures.",
+            "descriptionId": "Menangani card migration flow dan migrasi saldo user secara secure, termasuk mengatasi race condition dan menggunakan saga pattern untuk recovery saat terjadi service failure."
+          },
+          {
+            "description": "Implemented a new hold status for eVouchers to help reduce fraud.",
+            "descriptionId": "Menerapkan status hold baru pada eVoucher untuk membantu mengurangi fraud."
+          },
+          {
+            "description": "Handled eVoucher distribution through WhatsApp, email, and SMS using an event-driven system with a focus on delivery performance.",
+            "descriptionId": "Menangani distribusi eVoucher melalui WhatsApp, email, dan SMS menggunakan event-driven system dengan fokus pada performance pengiriman."
           }
         ]
       },
       {
         "team": {
-          "en": "Vendor Ecosystem & Integrations (Integration Team) - SaaS Integration Bridges",
-          "id": "Ekosistem & Integrasi Vendor (Tim Integrasi) - Bridge Integrasi SaaS"
+          "en": "Vendor Integrations",
+          "id": "Vendor Integrations"
         },
         "techStack": ["Node.js", "Express JS", "PostgreSQL", "MongoDB", "Redis", "REST APIs", "Webhooks"],
         "workDetails": [
           {
-            "description": "Maintained and expanded the central SaaS B2B interchange bridge (services/bridge), translating external vendor calls into internal card, point, order, and voucher operations with signature verification and idempotent delivery guarantees.",
-            "descriptionId": "Mengembangkan dan memperluas hub sentral B2B interchange bridge SaaS (services/bridge), menerjemahkan panggilan pihak ketiga ke kartu, poin, order, dan voucher internal dengan verifikasi signature dan kepastian pengiriman idempoten."
+            "description": "Handled payment transaction verification and reconciliation across Midtrans, Xendit, and Billplz, checking transaction status when webhooks failed to arrive to keep internal payment records aligned with gateway data.",
+            "descriptionId": "Menangani verifikasi dan rekonsiliasi transaksi pembayaran di Midtrans, Xendit, dan Billplz, dengan mengecek status transaksi saat webhook gagal diterima agar data pembayaran internal tetap sesuai dengan data payment gateway."
           },
           {
-            "description": "Developed unified payment gateway adapters across Midtrans, Xendit, and Billplz within the payment-gateway microservice, handling automated transaction status verification, fallback key handling, and asynchronous webhook reconciliation.",
-            "descriptionId": "Membangun adapter payment gateway terpadu untuk Midtrans, Xendit, dan Billplz pada microservice payment-gateway, menangani verifikasi status transaksi terotomasi, fallback penanganan kunci pembayaran, dan rekonsiliasi webhook asinkron."
+            "description": "Integrated logistics APIs from GoSend, Lalamove, SiCepat, and Shipper, from specification review through production rollout, to automate delivery fulfillment.",
+            "descriptionId": "Menangani integrasi API logistik GoSend, Lalamove, SiCepat, dan Shipper, dari review spesifikasi hingga rollout ke production, untuk mengotomatisasi fulfillment pengiriman."
           },
           {
-            "description": "Executed 7+ end-to-end vendor API integrations from specification review to production rollout across logistics (GoSend, Lalamove, SiCepat, Shipper), digital fulfillment (Tokopedia, RajaBiller, BPJS, Mobile Data, Gold), messaging (vFirst), and internal operations (Lark), eliminating manual fulfillment workflows and expanding the product catalog.",
-            "descriptionId": "Mengeksekusi 7+ integrasi API vendor secara end-to-end mulai dari analisis spesifikasi hingga peluncuran produksi untuk logistik (GoSend, Lalamove, SiCepat, Shipper), fulfillment digital (Tokopedia, RajaBiller, BPJS, Paket Data, Emas), perpesanan (vFirst), dan operasional internal (Lark), mengeliminasi proses manual dan memperluas katalog produk."
+            "description": "Integrated fulfillment using Tokopedia for physical items, alongside digital fulfillment APIs for RajaBiller, BPJS, mobile data, and gold products, to automate fulfillment and expand the product catalog.",
+            "descriptionId": "Menangani integrasi fulfillment menggunakan Tokopedia untuk barang fisik, serta API digital fulfillment untuk RajaBiller, BPJS, paket data, dan produk emas, untuk mengotomatisasi fulfillment dan memperluas katalog produk."
           },
           {
-            "description": "Engineered omnichannel messaging integrations for WhatsApp Business API (BTX-600, BTX-680), implementing dynamic template hydration, vendor-specific parameter normalization, and WhatsApp-based OTP authentication (BTX-524) to reduce SMS provider gateway costs.",
-            "descriptionId": "Membangun integrasi perpesanan omnichannel untuk WhatsApp Business API (BTX-600, BTX-680), mengimplementasikan hidrasi template dinamis, normalisasi parameter vendor, dan autentikasi OTP WhatsApp (BTX-524) untuk memangkas biaya gateway SMS."
+            "description": "Integrated vFirst messaging APIs to support automated message delivery.",
+            "descriptionId": "Mengintegrasikan API messaging vFirst untuk mendukung pengiriman pesan otomatis."
           },
           {
-            "description": "Developed and maintained skunkworks/ootoapi (Order Delivery & Logistics API), establishing automated courier dispatch, shipping rate queries, and live order tracking with national couriers (JNE, J&T, SiCepat).",
-            "descriptionId": "Mengembangkan dan memelihara skunkworks/ootoapi (Order Delivery & Logistics API), membangun otomasi dispatch kurir, kalkulasi tarif pengiriman, dan pelacakan status pengiriman dengan ekspedisi nasional (JNE, J&T, SiCepat)."
+            "description": "Integrated Lark APIs to automate internal operational workflows.",
+            "descriptionId": "Mengintegrasikan API Lark untuk mengotomatisasi workflow operasional internal."
           }
         ]
       }
@@ -116,36 +136,36 @@
     "techStack": ["PHP", "Laravel", "JavaScript", "MySQL", "HTML", "CSS", "Bootstrap"],
     "workDetails": [
       {
-        "description": "Directed full-lifecycle development of Fokoline, a specialized web booking platform for commercial printing and photocopy services, handling architecture design, relational database modeling, order checkout flows, and production deployment.",
-        "descriptionId": "Memimpin pengembangan siklus penuh platform web Fokoline untuk pemesanan jasa fotokopi dan percetakan, mencakup perancangan arsitektur, pemodelan database relasional, alur pemesanan, hingga deployment produksi."
+        "description": "Built Fokoline, a web booking platform for printing and photocopy services, from architecture and relational database design through checkout flows and production deployment.",
+        "descriptionId": "Membangun Fokoline, platform web untuk pemesanan jasa percetakan dan fotokopi, mulai dari desain arsitektur dan relational database hingga checkout flow dan deployment ke production."
       },
       {
-        "description": "Engineered responsive, accessible client landing pages and custom web modules using Laravel and modern JavaScript, optimizing page load performance and meeting client-specified functional requirements.",
-        "descriptionId": "Membangun landing page klien yang responsif dan modul web kustom menggunakan Laravel dan JavaScript modern, mengoptimalkan kecepatan akses dan memenuhi kebutuhan fungsional klien."
+        "description": "Built responsive, accessible landing pages and custom web modules with Laravel and JavaScript, improving load times and meeting client requirements.",
+        "descriptionId": "Membangun landing page yang responsive dan accessible serta modul web custom menggunakan Laravel dan JavaScript, dengan optimasi load time sesuai kebutuhan klien."
       }
     ]
   },
   {
     "date": "March 2019 - April 2021",
-    "companyName": "PT Bonatife Anjar Patria",
+    "companyName": "PT Bonafitek Anjar Patria",
     "title": "Web Developer",
     "techStack": ["PHP", "Laravel", "JavaScript", "MySQL", "PostgreSQL", "HTML", "CSS", "Bootstrap"],
     "workDetails": [
       {
-        "description": "Delivered 2+ government enterprise systems, digitizing manual bureaucratic processes into automated operational workflows and official correspondence management.",
-        "descriptionId": "Menyelesaikan 2+ sistem enterprise pemerintahan, mendigitalkan alur birokrasi manual menjadi workflow operasional terotomasi dan manajemen persuratan dinas resmi."
+        "description": "Delivered 2+ enterprise systems for government agencies, replacing manual administrative processes with automated workflows and digital official correspondence management.",
+        "descriptionId": "Menyelesaikan 2+ sistem enterprise untuk instansi pemerintah, mengubah proses administrasi manual menjadi workflow otomatis dan pengelolaan surat dinas digital."
       },
       {
-        "description": "Engineered real-time budget absorption monitoring dashboards for a ministry finance bureau, providing data-driven visibility for quarterly fiscal realization targets.",
-        "descriptionId": "Membangun dashboard monitoring real-time penyerapan anggaran untuk biro keuangan kementerian, menyediakan visibilitas berbasis data guna memantau target realisasi fiskal kuartalan."
+        "description": "Built real-time budget monitoring dashboards for a ministry finance bureau to track spending against quarterly budget realization targets.",
+        "descriptionId": "Membangun dashboard monitoring penyerapan anggaran secara real-time untuk biro keuangan kementerian agar tim bisa memantau pencapaian target realisasi anggaran setiap kuartal."
       },
       {
-        "description": "Constructed normalized relational database schemas in PostgreSQL and MySQL to support complex multi-table analytical reporting requirements in enterprise public sector environments.",
-        "descriptionId": "Merancang skema database relasional ternormalisasi di PostgreSQL dan MySQL untuk mendukung kebutuhan pelaporan analitik multi-tabel pada lingkungan sektor publik berskala enterprise."
+        "description": "Designed normalized relational database schemas in PostgreSQL and MySQL to support analytical reports across multiple tables for public sector systems.",
+        "descriptionId": "Merancang schema relational database dengan normalisasi di PostgreSQL dan MySQL untuk mendukung laporan analitik lintas tabel pada sistem instansi pemerintah."
       },
       {
-        "description": "Developed a mission-critical platform for the Ministry of Tourism to manage Regional Allocation Funds (DAK), enabling regional government entities across Indonesia to submit, validate, and audit regional budget proposals.",
-        "descriptionId": "Mengembangkan platform mission-critical untuk Kementerian Pariwisata dalam pengelolaan Dana Alokasi Khusus (DAK), memungkinkan dinas daerah di seluruh Indonesia mengajukan, memvalidasi, dan mengaudit proposal anggaran daerah."
+        "description": "Developed a platform for the Ministry of Tourism to manage Dana Alokasi Khusus (DAK), enabling regional government offices across Indonesia to submit, validate, and audit budget proposals.",
+        "descriptionId": "Mengembangkan platform pengelolaan Dana Alokasi Khusus (DAK) untuk Kementerian Pariwisata, sehingga dinas daerah di seluruh Indonesia bisa mengajukan, memvalidasi, dan mengaudit proposal anggaran."
       }
     ]
   },
@@ -156,12 +176,12 @@
     "techStack": ["Symfony", "jQuery", "JavaScript", "SQL", "SynchroX"],
     "workDetails": [
       {
-        "description": "Constructed operational monitoring dashboard interfaces to provide visibility into distributed service status and system health.",
-        "descriptionId": "Membangun antarmuka dashboard monitoring operasional untuk menyediakan visibilitas status layanan terdistribusi dan kesehatan sistem."
+        "description": "Built operational monitoring dashboards to track distributed service status and system health.",
+        "descriptionId": "Membangun dashboard monitoring operasional untuk memantau status distributed service dan system health."
       },
       {
-        "description": "Integrated heterogeneous external systems using SynchroX middleware to establish automated data synchronization and cross-platform interoperability.",
-        "descriptionId": "Mengintegrasikan sistem eksternal heterogen menggunakan middleware SynchroX guna mewujudkan sinkronisasi data terotomasi dan interoperabilitas lintas platform."
+        "description": "Integrated external systems through SynchroX middleware to automate data synchronization and enable data exchange across platforms.",
+        "descriptionId": "Mengintegrasikan sistem eksternal melalui middleware SynchroX untuk mengotomatisasi sinkronisasi data dan mendukung pertukaran data antar-platform."
       }
     ]
   }

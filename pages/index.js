@@ -175,7 +175,7 @@ export default function Home() {
       <div id="top" className="min-h-screen bg-white text-text-primary">
         <Navbar language={language} onLanguageChange={handleLanguageChange} />
 
-        <main className="mx-auto flex w-full max-w-[960px] flex-col gap-20 px-6 py-10 md:px-8 md:py-16">
+        <main className="mx-auto flex w-full max-w-[960px] flex-col gap-12 px-4 py-6 sm:gap-16 sm:px-6 sm:py-10 md:gap-20 md:px-8 md:py-16">
           <Biodata language={language} />
           <Work language={language} />
           <Skill language={language} />

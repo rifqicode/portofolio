@@ -4,7 +4,7 @@ import site from '../assets/data/site.json';
 export default function Footer({ language = 'en' }) {
   return (
     <footer className="border-t border-surface-border bg-surface-subtle text-text-secondary">
-      <div className="mx-auto flex max-w-[960px] flex-col items-center justify-between gap-4 px-6 py-8 md:flex-row md:px-8">
+      <div className="mx-auto flex max-w-[960px] flex-col items-center justify-between gap-4 px-4 py-6 text-center sm:px-6 sm:py-8 md:text-left md:flex-row md:px-8">
         <div className="flex flex-col items-center md:items-start gap-1">
           <p className="text-sm font-semibold text-text-primary">
             &copy; {new Date().getFullYear()} {biodata.name}
@@ -16,14 +16,14 @@ export default function Footer({ language = 'en' }) {
           </p>
         </div>
 
-        <div className="flex items-center gap-5 text-xs font-medium">
+        <div className="flex flex-wrap justify-center items-center gap-x-5 gap-y-1 text-xs font-medium">
           {site.socialLinks.map((item) => (
             <a
               key={item.label}
               href={item.url}
               target="_blank"
               rel="noreferrer"
-              className="text-text-secondary transition hover:text-black"
+              className="inline-flex min-h-[44px] items-center text-text-secondary transition hover:text-black"
             >
               {item.label}
             </a>
@@ -32,7 +32,7 @@ export default function Footer({ language = 'en' }) {
             href={biodata.cvUrl}
             target="_blank"
             rel="noreferrer"
-            className="font-semibold text-black transition hover:underline"
+            className="inline-flex min-h-[44px] items-center font-semibold text-black transition hover:underline"
           >
             Curriculum Vitae
           </a>

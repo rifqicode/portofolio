@@ -42,7 +42,7 @@
         "en": "Containerization, orchestration, cloud infrastructure, and observability",
         "id": "Kontainerisasi, orkestrasi kluster, infrastruktur cloud, dan observabilitas"
       },
-      "names": ["Docker", "Kubernetes", "AWS EC2", "AWS S3", "AWS Lambda", "Grafana"]
+      "names": ["Docker", "Kubernetes", "AWS", "Grafana"]
     },
     {
       "category": {
@@ -53,39 +53,35 @@
         "en": "Agentic coding workflows, automated debugging, and modern AI acceleration",
         "id": "Workflow coding agentik, otomasi debugging, dan akselerasi engineering berbasis AI"
       },
-      "names": ["Claude Code", "GitHub Copilot", "Cursor", "ChatGPT", "Gemini"]
+      "names": ["Claude", "Codex", "Antigravity"]
     }
   ],
   "toolIcons": {
-    "Go": "devicon-go-original-wordmark colored",
+    "Go": "devicon-go-plain colored",
     "JavaScript": "devicon-javascript-plain colored",
     "PHP": "devicon-php-plain colored",
-    "SQL": "devicon-postgresql-plain colored",
+    "SQL": "fas fa-database text-blue-600",
     "PostgreSQL": "devicon-postgresql-plain colored",
     "Redis": "devicon-redis-plain colored",
     "Kafka": "devicon-apachekafka-original colored",
-    "Debezium": "fas fa-database",
+    "Debezium": "fas fa-bolt text-amber-500",
     "MongoDB": "devicon-mongodb-plain colored",
     "MySQL": "devicon-mysql-plain colored",
     "ElasticSearch": "devicon-elasticsearch-plain colored",
-    "NSQ": "fas fa-stream",
-    "Gin": "devicon-go-original-wordmark colored",
+    "NSQ": "fas fa-stream text-indigo-500",
+    "Gin": "devicon-go-plain colored",
     "Express JS": "devicon-express-original colored",
     "Laravel": "devicon-laravel-plain colored",
     "Symfony": "devicon-symfony-original colored",
     "React JS": "devicon-react-original colored",
-    "Next JS": "devicon-nextjs-original-wordmark colored",
+    "Next JS": "devicon-nextjs-plain colored",
     "Tailwind CSS": "devicon-tailwindcss-plain colored",
     "Docker": "devicon-docker-plain colored",
     "Kubernetes": "devicon-kubernetes-plain colored",
-    "AWS EC2": "devicon-amazonwebservices-plain colored",
-    "AWS S3": "devicon-amazonwebservices-plain colored",
-    "AWS Lambda": "devicon-amazonwebservices-plain colored",
-    "Grafana": "devicon-grafana-plain",
-    "Claude Code": "fas fa-terminal",
-    "GitHub Copilot": "fas fa-robot",
-    "Cursor": "fas fa-code",
-    "ChatGPT": "fas fa-robot",
-    "Gemini": "fas fa-terminal"
+    "AWS": "devicon-amazonwebservices-plain colored",
+    "Grafana": "devicon-grafana-plain colored",
+    "Claude": "/icons/claude.svg",
+    "Codex": "/icons/codex.svg",
+    "Antigravity": "/icons/antigravity.svg"
   }
 }
