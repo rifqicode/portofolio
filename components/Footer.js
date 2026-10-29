@@ -1,5 +1,6 @@
 import biodata from '../assets/data/biodata.json';
 import site from '../assets/data/site.json';
+import { generateAndDownloadCV } from '../utils/generateCV';
 
 export default function Footer({ language = 'en' }) {
   return (
@@ -28,14 +29,13 @@ export default function Footer({ language = 'en' }) {
               {item.label}
             </a>
           ))}
-          <a
-            href={biodata.cvUrl}
-            target="_blank"
-            rel="noreferrer"
+          <button
+            type="button"
+            onClick={() => generateAndDownloadCV(language)}
             className="inline-flex min-h-[44px] items-center font-semibold text-black transition hover:underline"
           >
             Curriculum Vitae
-          </a>
+          </button>
         </div>
       </div>
     </footer>
