@@ -43,6 +43,15 @@ function renderStatusBadge(badge) {
     );
   }
 
+  if (badge === 'Desktop App') {
+    return (
+      <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-0.5 text-xs font-semibold text-amber-700 border border-amber-200">
+        <span className="material-symbols-outlined text-[13px] text-amber-600">desktop_windows</span>
+        {badge}
+      </span>
+    );
+  }
+
   return (
     <span className="inline-flex items-center rounded-full bg-surface-muted px-2.5 py-0.5 text-xs font-semibold text-text-secondary border border-surface-border">
       {badge}

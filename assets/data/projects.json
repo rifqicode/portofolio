@@ -45,5 +45,14 @@
     "badge": "Real-time WebSocket",
     "tags": ["Node.js", "Express", "Socket.io", "WebSockets", "MongoDB"],
     "url": "https://github.com/rifqicode/game-tanya-jawab"
+  },
+  {
+    "name": "qark-pet",
+    "description": "Lightweight Linux X11 desktop companion and notification daemon built with Electron, Node.js, and D-Bus. Features real-time window geometry detection, workspace clutter and coding streak awareness, MPRIS media player tracking, and automatic edge-peeking mode with sub-pixel collision mitigation for full-screen workflows.",
+    "descriptionId": "Aplikasi desktop companion dan notification daemon Linux X11 berbasis Electron, Node.js, dan D-Bus. Dilengkapi deteksi status window real-time, monitoring workspace clutter dan coding streak, integrasi media player MPRIS, serta mode peeking otomatis di tepi layar saat window fullscreen.",
+    "icon": "pets",
+    "badge": "Desktop App",
+    "tags": ["Electron", "Node.js", "X11 / EWMH", "D-Bus", "MPRIS", "Linux Desktop"],
+    "url": "https://github.com/rifqicode/qark-pet"
   }
 ]
